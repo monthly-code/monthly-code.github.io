@@ -1,0 +1,4 @@
+{%- if include.collection -%}
+    {%- assign collection_items = include.collection | sort: "order" | where_exp: "item", "item.title != 'Index'" -%}
+    {%- assign collection_size = collection_items | size -%}
+{%- endif -%}

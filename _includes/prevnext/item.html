@@ -1,0 +1,14 @@
+{%- if include.item -%}
+    <div class="prevnext-item-area">
+        <div class="container">
+            <span clsas="prevnext-item-date">{{- include.item.date -}}</span>
+            {%- for category in include.item.categories -%}
+                <span class="prevnext-item-category">{{- category -}}</span>
+            {%- endfor -%}
+            <a href="{{- include.item.url | relative_url -}}">
+                <p class="prevnext-item-title">{{- include.item.title | escape -}}</p>
+            </a>
+            <p class="prevnext-item-subtitle">{{- include.item.subtitle | escape -}}</p>
+        </div>
+    </div>
+{%- endif -%}

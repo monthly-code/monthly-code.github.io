@@ -1,0 +1,16 @@
+<a href="{{- include.item.title | escape | downcase -}}">
+    <p class="item-categories">
+        {%- for category in include.item.categories -%}
+            <span class="item-category">{{- category -}}</span>
+        {%- endfor -%}
+    </p>
+    <p class="item-title">
+        {{- include.item.title -}}
+    </p>
+    <p class="item-subtitle">
+        {{- include.item.subtitle -}}
+    </p>
+    <p class="item-excerpt">
+        {{- include.item.excerpt | strip_html -}}
+    </p>
+</a>

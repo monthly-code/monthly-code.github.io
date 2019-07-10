@@ -1,0 +1,7 @@
+{%- assign quotient = include.size | divided_by: site.paginator.size -%}
+{%- assign remainder = include.size | modulo: site.paginator.size -%}
+
+{%- assign paginator_size = quotient -%}
+{%- if remainder > 0 -%}
+    {%- assign paginator_size = quotient | plus: 1 -%}
+{%- endif -%}

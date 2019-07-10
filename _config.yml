@@ -1,0 +1,72 @@
+# User Setting
+gmail_username: 
+github_username: monthly-code
+gitlab_username: 
+google-analytics: 
+disqus_username: monthly-code
+
+# Site Path Setting
+host:
+port:
+url: 
+baseurl: 
+
+# Site Info Setting
+title:
+intro: >
+  Intro message!
+
+# Permalink Setting
+permalink: pretty
+
+# Paginator Setting
+paginator:
+  size: 5
+
+# Collection Setting
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path
+  journals:
+    output: true
+    permalink: /:collection/:path
+  tags:
+    output: true
+    permalink: /:collection/:path
+  jekyll:
+    output: true
+  gitlab:
+    output: true
+
+# Default Setting
+defaults:
+  -
+    scope:
+      path: _jekyll
+      type: jekyll # candidate only collection name
+    values:
+      permalink: docs/jekyll/:title
+  -
+    scope:
+      path: _gitlab
+      type: gitlab
+    values:
+      permalink: docs/gitlab/:title
+
+# Markdown Setting
+markdown: kramdown
+kramdown:
+  input: GFM
+  highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Build Setting
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+# Github Setting
+github: [metadata]

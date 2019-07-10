@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{%- if page.title -%}{{- page.title | escape -}}{%- else -%}{{- site.title | escape -}}{%- endif -%}</title>
+
+<!-- search -->
+{%- if page.subtitle -%} <meta name="description" content="{{- page.subtitle -}}"> {%- endif -%}
+<link rel="canonical" href="{{- page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url -}}">
+
+<meta property="og:type" content="article{%- comment -%} website {%- endcomment -%}">
+<meta property="og:title" content="{{- page.title -}}">
+<meta property="og:description" content="{{- page.subtitle -}}">
+{%- comment -%}<meta property="og:image" content="{{- page.url | prepend: site.url | append: '/thumbnail.png' -}}">{%- endcomment -%}
+<meta property="og:url" content="{{- site.basurl | prepend: site.url -}}">
+
+<link rel="alternate" type="application/rss+xml" title="{{- site.title -}}" href="{{- '/rss/' | prepend: site.baseurl | prepend: site.url -}}">
+
+ <!-- icon -->
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+ crossorigin="anonymous">
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Heebo|Noto+Sans+KR" rel="stylesheet">
+
+{%- comment -%}
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/header.css">
+<link rel="stylesheet" href="/assets/css/footer.css">
+<link rel="stylesheet" href="/assets/css/fab.css">
+<link rel="stylesheet" href="/assets/css/nav.css">
+<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/page.css">
+<link rel="stylesheet" href="/assets/css/paginator.css">
+<link rel="stylesheet" href="/assets/css/prevnext.css">
+<link rel="stylesheet" href="/assets/css/collection.css">
+<link rel="stylesheet" href="/assets/css/disqus.css">
+<link rel="stylesheet" href="/assets/css/toc.css">
+{%- endcomment -%}
+
+<script src="https://d3js.org/d3.v5.min.js"></script>

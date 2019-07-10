@@ -1,0 +1,33 @@
+{%- if page.collection -%}
+    {%- assign collection_items = site[page.collection] | sort: "order" -%}
+{%- endif -%}
+
+{%- for collection_item in collection_items -%}
+    {%- unless collection_item.title == page.title -%}
+        {%- assign tmpprev = collection_item -%}
+        {%- continue -%}
+    {%- endunless -%}
+    
+    {%- unless forloop.first -%}
+        {%- unless tmpprev.title == 'Index' -%}
+            {%- assign prev = tmpprev -%}
+        {%- else -%}
+
+            {%- assign idx_prev = forloop.index | minus: 3 -%}
+            {%- unless idx_prev < 0 -%}
+                {%- assign prev = collection_items[idx_prev] -%}
+            {%- endunless -%}
+        {%- endunless -%}
+    {%- endunless -%}
+
+    {%- unless forloop.last -%}
+        {%- unless collection_items[forloop.index].title == 'Index' -%}
+            {%- assign next = collection_items[forloop.index] -%}
+        {%- else -%}
+            {%- assign idx_next = forloop.index | plus: 1 -%}
+            {%- assign next = collection_items[idx_next] -%}
+        {%- endunless -%}
+    {%- endunless -%}
+
+    {%- break -%}
+{%- endfor -%}

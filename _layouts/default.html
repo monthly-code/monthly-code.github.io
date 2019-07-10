@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {%- include base/head.html -%}
+</head>
+<body>
+    {%- include base/header.html -%}
+    {%- comment -%}
+    {%- include base/nav.html -%}
+    {%- endcomment -%}
+    <main class="main-area">
+        <div class="container">
+            {{- content -}}
+        </div>
+    </main>
+    {%- include addon/fab.html -%}
+    {%- include base/footer.html -%}
+    <!-- <script src="/assets/js/main.js"></script> -->
+</body>
+</html>

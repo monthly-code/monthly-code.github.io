@@ -1,0 +1,16 @@
+{%- include prevnext/data.html -%}
+
+{%- if prev or next -%}
+<div class="prevnext-area">
+    <div class="container">
+        <ul class="prevnext-items">
+            <li class="prevnext-item">
+                {%- include prevnext/item.html item=prev -%}
+            </li>
+            <li class="prevnext-item">
+                {%- include prevnext/item.html item=next -%}
+            </li>
+        </ul>
+    </div>
+</div>
+{%- endif -%}
