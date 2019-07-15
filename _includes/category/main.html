@@ -1,0 +1,15 @@
+{%- include category/data.html -%}
+
+<ul class="category-items">
+    {% for label in labels %}
+    {%- if label == 'categories' or label == 'tags' or label == 'posts' -%}
+        {%- continue -%}
+    {%- endif -%}
+    {%- for publication in site[label] -%}
+        {%- if publication.title == 'Index' -%}
+            {%- continue -%}
+        {%- endif -%}
+            {%- include category/items.html -%}
+        {%- endfor -%}
+    {% endfor %}
+</ul>

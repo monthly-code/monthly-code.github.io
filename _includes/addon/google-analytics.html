@@ -1,17 +1,17 @@
 <!-- Google Analytics -->
 <script>
         window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', '{{ site.google-analytics }}', 'auto');
+        ga('create', '{{- site.google-analytics.ua -}}', 'auto');
         ga('send', 'pageview');
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="{{ site.google-analytics | prepend: https://www.googletagmanager.com/gtag/js?id=}}"></script>
+    <script async src="{{- site.google-analytics.ua | prepend: https://www.googletagmanager.com/gtag/js?id= -}}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
-      gtag('config', '{{ site.google-analytics }}');
+      gtag('config', '{{- site.google-analytics.ua -}}');
     </script>

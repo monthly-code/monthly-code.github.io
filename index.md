@@ -2,3 +2,5 @@
 ---
 
 # home
+
+{{- site.categories -}}

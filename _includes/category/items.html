@@ -1,0 +1,9 @@
+{%- for category in publication.categories -%}
+    {%- if category != include.title -%}
+        {%- continue -%}
+    {%- endif -%}
+    <li class="category-item">
+        {%- include category/item.html item=publication -%}
+    </li>
+    {%- break -%}
+{%- endfor -%}

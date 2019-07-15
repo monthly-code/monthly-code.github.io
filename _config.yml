@@ -1,9 +1,15 @@
 # User Setting
-gmail_username: 
-github_username: monthly-code
-gitlab_username: 
+gmail:
+  username: monthly-code
+  id: monthly-code@gmail.com
+github:
+  username: monthly-code
+gitlab:
+  username: 
 google-analytics: 
-disqus_username: monthly-code
+  ua:
+disqus:
+  username: monthly-code
 
 # Site Path Setting
 host:
@@ -12,7 +18,7 @@ url:
 baseurl: 
 
 # Site Info Setting
-title:
+title: monthly code's site
 intro: >
   Intro message!
 
@@ -32,6 +38,9 @@ collections:
     output: true
     permalink: /:collection/:path
   tags:
+    output: true
+    permalink: /:collection/:path
+  categories:
     output: true
     permalink: /:collection/:path
   jekyll:
@@ -67,6 +76,3 @@ kramdown:
 exclude:
   - Gemfile
   - Gemfile.lock
-
-# Github Setting
-github: [metadata]

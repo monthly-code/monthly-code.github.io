@@ -1,0 +1,9 @@
+{%- for tag in publication.tags -%}
+    {%- if tag != include.title -%}
+        {%- continue -%}
+    {%- endif -%}
+    <li class="tag-item">
+        {%- include tag/item.html item=publication -%}
+    </li>
+    {%- break -%}
+{%- endfor -%}
