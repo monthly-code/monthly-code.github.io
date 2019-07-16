@@ -1,14 +1,17 @@
 {%- if include.item -%}
     <div class="prevnext-item-area">
         <div class="container">
-            <span clsas="prevnext-item-date">{{- include.item.date -}}</span>
+            <p><em>{{- include.item.collection -}}</em> | <em clsas="prevnext-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
+            {%- comment -%}
             {%- for category in include.item.categories -%}
                 <span class="prevnext-item-category">{{- category -}}</span>
             {%- endfor -%}
+            {%- endcomment -%}
             <a href="{{- include.item.url | relative_url -}}">
-                <p class="prevnext-item-title">{{- include.item.title | escape -}}</p>
+                <p class="prevnext-item-title">{{- include.item.title | strip_html -}}</p>
             </a>
-            <p class="prevnext-item-subtitle">{{- include.item.subtitle | escape -}}</p>
+            <p class="prevnext-item-subtitle">{{- include.item.subtitle | strip_html -}}</p>
+            <p class="prevnext-item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
         </div>
     </div>
 {%- endif -%}

@@ -1,0 +1,1 @@
+{%- assign publications = site[include.label] | where_exp: 'publication', 'publication.title!="Index"' -%}

@@ -1,0 +1,2 @@
+{%- assign labels = site.collections | map: 'label' | where_exp:'label', 'label!="posts"' -%}
+{%- assign published_labels = labels | where_exp:'label', 'label!="categories"' | where_exp:'label', 'label!="tags"' -%}
