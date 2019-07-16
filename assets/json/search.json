@@ -1,0 +1,27 @@
+---
+---
+{%- capture search_json -%}
+{%- assign labels = site.collections | where_exp: "item", "item.label != posts" | map: "label" -%}
+{% for label in labels %}
+  {%- assign publications = site[label] | where_exp: "item", "item.title != 'Index'" | sort: "order" -%}
+  {%- assign publication_size = publications | size -%}
+  {%- unless publication_size > 0 -%} {%- continue -%} {%- endunless -%}
+  {% unless forloop.first %}, {% endunless %}
+  {%- for publication in publications -%}
+  {% unless forloop.first %}, {% endunless %}
+  {
+    "collection" : "{{- publication.collection | escape -}}",
+    "title"      : "{{- publication.title | escape -}}",
+    "subtitle"   : "{{- publication.subtitle | escape -}}",
+    "categories" : "{{- publication.categories | join: ', ' -}}",
+    "tags"       : "{{- publication.tags | join: ', ' -}}",
+    "url"        : "{{- site.baseurl -}}{{- publication.url -}}",
+    "date"       : "{{- publication.date -}}",
+    "contents"   : {{- publication.content | strip_html | strip_newlines | jsonify -}}
+  }
+  {%- endfor -%}
+{% endfor %}
+{%- endcapture -%}
+[
+  {{- search_json | strip -}}  
+]

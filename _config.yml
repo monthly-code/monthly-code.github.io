@@ -66,11 +66,11 @@ defaults:
 # Markdown Setting
 markdown: kramdown
 kramdown:
-  input: GFM
   highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
+  # syntax_highlighter_opts:
+  #   block:
+  #     line_numbers: true
+  # input: GFM
 
 # Build Setting
 exclude:
