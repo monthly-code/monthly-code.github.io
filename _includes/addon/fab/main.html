@@ -1,0 +1,11 @@
+<div class="fab-area">
+    <div class="container">
+        <ul class="fab-items">
+            {% for fab in include.fabs %}
+            <li class="fab-item {{fab.class}}" id="{{fab.id}}">
+                {%- include addon/fab/item.html class=fab.icon -%}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
