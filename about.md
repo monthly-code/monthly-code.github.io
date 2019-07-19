@@ -2,4 +2,4 @@
 permalink: about
 ---
 
-# about
+# About
