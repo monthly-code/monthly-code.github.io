@@ -6,27 +6,14 @@
 <div class="home-area">
     <h1>Recent</h1>
     <ul class="home-list">
-    {%- include data/labels.html -%}
+    {%- include common/data/labels.html -%}
     {%- for label in published_labels -%}
-        {%- include data/publications.html label=label -%}
-        {%- include data/sorted.html data=publications by="date" -%}
+        {%- include common/data/publications.html label=label -%}
+        {%- include common/data/sorted.html data=publications by="date" -%}
         <li class="home-item">
-            <h3 class="home-collection-title">{{- label | escape -}}</h3>
-            <ul class="home-collection-list">
-            {%- for publication in reverse_sorted limit: 3 -%}
-                <li class="home-collection-item">
-                    <p><em>{{- label -}}</em> | <em>{{- publication.date | date: "%B %d, %Y" -}}</em></p>
-                    {%- for category in publication.categories -%}
-                        <a href="/categories/{{- publication.category -}}">{{- category -}}</a>
-                    {%- endfor -%}
-                    <a href="{{- publication.url -}}">
-                        <p>{{- publication.title | strip_html -}}</p>
-                    </a>
-                    <p>{{- publication.excerpt | strip_html -}}</p>
-                    {%- comment -%}<p>{{- publication.tags | join: ", " -}}</p>{%- endcomment -%}
-                </li>
-            {%- endfor -%}
-            </ul>
+            <h3 class="home-collection-label">{{- label | escape -}}</h3>
+            {%- assign items = reverse_sorted | limit: 3 -%}
+            {%- include common/items.html items_name="home-collection-items" item_name="home-colleciton-item" items=items label=label -%}
         </li>
         {%- endfor -%}
     </ul>

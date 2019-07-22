@@ -1,0 +1,22 @@
+<li class="{{- include.item_name -}}">
+    <p><em>{{- include.label | escape -}}</em> | <em>{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
+
+    {%- comment -%}
+    <p>
+    {%- for category in include.item.categories -%}
+        <a href="/categories/{{- category -}}">{{- category | escape -}}</a>
+    {%- endfor -%}
+    </p>
+    {%- endcomment -%}
+    
+    <a href="{{- include.item.url | escape | downcase -}}"><p class="item-title">{{- include.item.title | strip_html -}}</p></a>
+    <p class="item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
+    
+    {%- comment -%}
+    <p>
+        {%- for tag in include.item.tags -%}
+            <a href="/tags/{{- tag -}}">{{- tag | escape -}}</a>
+        {%- endfor -%}
+    </p>
+    {%- endcomment -%}
+</li>

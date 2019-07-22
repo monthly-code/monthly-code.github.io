@@ -1,9 +1,11 @@
-{%- for tag in publication.tags -%}
-    {%- if tag != include.title -%}
-        {%- continue -%}
-    {%- endif -%}
-    <li class="tag-item">
-        {%- include tag/item.html item=publication -%}
-    </li>
-    {%- break -%}
+<ul class="{{- include.items_name -}}">
+{%- for publication in include.items -%}
+    {%- for tag in publication.tags -%}
+        {%- if tag != include.page_title -%}
+            {%- continue -%}
+        {%- endif -%}
+        {%- include common/item.html item_name=include.item_name item=publication label=label -%}
+        {%- break -%}
+    {%- endfor -%}
 {%- endfor -%}
+</ul>

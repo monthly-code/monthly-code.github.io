@@ -1,15 +1,6 @@
-{%- include tag/data.html -%}
+{%- include common/data/labels.html -%}
 
-<ul class="tag-items">
-    {% for label in labels %}
-    {%- if label == 'categories' or label == 'tags' or label == 'posts' -%}
-        {%- continue -%}
-    {%- endif -%}
-    {%- for publication in site[label] -%}
-        {%- if publication.title == 'Index' -%}
-            {%- continue -%}
-        {%- endif -%}
-            {%- include tag/items.html -%}
-        {%- endfor -%}
-    {% endfor %}
-</ul>
+{% for label in published_labels %}
+    {%- include common/data/publications.html label=label -%}
+    {%- include tag/items.html items_name="tag-items" item_name="tag-item" items=publications label=label page_title=include.title -%}
+{% endfor %}
