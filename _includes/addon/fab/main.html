@@ -1,11 +1,17 @@
 <div class="fab-area">
     <div class="container">
+        {% include addon/search/bar.html %}
         <ul class="fab-items">
-            {% for fab in include.fabs %}
-            <li class="fab-item {{fab.class}}" id="{{fab.id}}">
-                {%- include addon/fab/item.html class=fab.icon -%}
+            <li class="fab-item fab-top" id="fabTop">
+                <a role="button">
+                    <i class="fas fa-angle-up"></i>
+                </a>
             </li>
-            {% endfor %}
+            <li class="fab-item fab-search" id="fabSearch">
+                <a role="button">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

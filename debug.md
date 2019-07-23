@@ -19,6 +19,7 @@ site category: {{ site.category | inspect }}<br>
 site categories: {{ site.categories | inspect }}<br>
 site collections: {{ site.collections | map: "label" | join: ", " }}<br>
 site pages: {{ site.pages | map: "name" | join: ", " }}<br>
+site defaults: {{ site.defaults | inspect }}<br>
 
 {%- comment -%}<!-- 가능하면 보지 말 것 -->{{ site | inspect }}<br>{%- endcomment -%}
 {%- comment -%}<!-- 가능하면 보지 말 것 -->{{- site.collections | inspect -}}<br>{%- endcomment -%}
