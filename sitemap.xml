@@ -1,0 +1,35 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  {% include common/data/labels.html %}
+  {%- for label in published_labels -%}
+    {%- include common/data/publications.html label=label -%}
+    {%- for publication in publications -%}
+      <url>
+      <loc>{{- site.url -}}{{ publication.url }}</loc>
+      {%- if publication.lastmod == null -%}
+          <lastmod>{{- publication.date | date_to_xmlschema -}}</lastmod>
+      {%- else -%}
+          <lastmod>{{- publication.lastmod | date_to_xmlschema -}}</lastmod>
+      {%- endif -%}
+
+      {%- if publication.sitemap.changefreq == null -%}
+          <changefreq>weekly</changefreq>
+      {%- else -%}
+          <changefreq>{{- publication.sitemap.changefreq -}}</changefreq>
+      {%- endif -%}
+
+      {%- if publication.sitemap.priority == null -%}
+          <priority>0.5</priority>
+      {%- else -%}
+          <priority>{{- publication.sitemap.priority -}}</priority>
+      {%- endif -%}
+      </url>
+    {%- endfor -%}
+  {%- endfor -%}
+</urlset>

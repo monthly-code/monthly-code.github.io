@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /rss/
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{- site.title | xml_escape -}}</title>
+    <description>{{- site.description | xml_escape -}}</description>
+    <link>{{- site.url -}}{{- site.baseurl -}}</link>
+    <atom:link href="{{- site.url -}}{{- site.baseurl -}}/rss" rel="self" type="application/rss+xml"/>
+    <pubDate>{{- site.time | date_to_rfc822 -}}</pubDate>
+    <lastBuildDate>{{- site.time | date_to_rfc822 -}}</lastBuildDate>
+    <generator>Jekyll v{{- jekyll.version -}}</generator>
+    
+    {%- include common/data/labels.html -%}
+    {%- for label in published_labels -%}
+        {%- include common/data/publications.html label=label -%}
+        {%- for publication in publications limit:30 -%}
+            <item>
+                <title>{{- publication.title | xml_escape -}}</title>
+                <description>{{- publication.content | xml_escape -}}</description>
+                <pubDate>{{- publication.date | date_to_rfc822 -}}</pubDate>
+                <link>{{- site.url -}}{{- site.baseurl -}}{{- publication.url -}}</link>
+                <guid isPermaLink="true">{{- site.url -}}{{- site.baseurl -}}{{- publication.url -}}</guid>
+                {%- for cat in publication.categories -%}
+                <category>{{- cat | xml_escape -}}</category>
+                {%- endfor -%}
+                {%- for tag in publication.tags -%}
+                <tag>{{- tag | xml_escape -}}</tag>
+                {%- endfor -%}
+            </item>
+        {%- endfor -%}
+    {%- endfor -%}
+  </channel>
+</rss>
