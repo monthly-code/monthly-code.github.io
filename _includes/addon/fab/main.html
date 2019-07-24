@@ -2,16 +2,9 @@
     <div class="container">
         {% include addon/search/bar.html %}
         <ul class="fab-items">
-            <li class="fab-item fab-top" id="fabTop">
-                <a role="button">
-                    <i class="fas fa-angle-up"></i>
-                </a>
-            </li>
-            <li class="fab-item fab-search" id="fabSearch">
-                <a role="button">
-                    <i class="fas fa-search"></i>
-                </a>
-            </li>
+            {%- include addon/fab/top.html -%}
+            {%- include addon/fab/invert.html -%}
+            {%- include addon/fab/search.html -%}
         </ul>
     </div>
 </div>

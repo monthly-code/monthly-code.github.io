@@ -1,0 +1,56 @@
+.header-area {
+
+}
+
+.header-area > .container {
+
+}
+
+.main-area {
+    position: relative;
+    padding: 20px;
+}
+
+.main-area > .container {
+
+}
+
+.footer-area {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-area > .container {
+    background: #777;
+}
+
+.footer-area > .container > .account-area {
+    display: inline-block;
+    position: relative;
+    left: 25%;
+}
+
+.footer-area > .container > .account-area > .account-items {
+    list-style-type: none;
+}
+
+.footer-area > .container > .account-area > .account-items > .account-item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer-area > .container > .account-area > .account-items > .account-item > a {
+
+}
+
+.footer-area > .container > .account-area > .account-items > .account-item > a > i {
+    color: white;
+}
+
+.footer-area > .container > .copyright-area {
+    display: inline-block;
+    position: relative;
+    color: white;
+}

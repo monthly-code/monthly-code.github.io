@@ -1,7 +1,6 @@
 # User Setting
 gmail:
-  username: monthly-code
-  id: monthly-code@gmail.com
+  username: monthly.code
 github:
   username: monthly-code
 gitlab:

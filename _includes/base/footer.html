@@ -1,0 +1,26 @@
+<footer class="footer-area">
+    <div class="container">
+        <div class="account-area">
+            <ul class="account-items">
+                {%- if site.gmail.username -%}
+                <li class="account-item">
+                    <a href="mailto:{{- site.github.username -}}@gmail.com"><i class="far fa-envelope"></i></a>
+                </li>    
+                {%- endif -%}
+                {%- if site.github.username -%}
+                <li class="account-item">
+                    <a href="https://github.com/{{- site.github.username -}}"><i class="fab fa-github"></i></a>
+                </li>
+                {%- endif -%}
+                {%- if site.gitlab.username -%}
+                    <li class="account-item">
+                        <a href="https://gitlab.com/{{- site.gitlab.username -}}"><i class="fab fa-gitlab"></i></a>
+                    </li>
+                {%- endif -%}
+            </ul>
+        </div>
+        <div class="copyright-area">
+            
+        </div>
+    </div>
+</footer>

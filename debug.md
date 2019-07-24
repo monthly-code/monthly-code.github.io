@@ -29,7 +29,7 @@ site defaults: {{ site.defaults | inspect }}<br>
 
 # Site Config Info.
 site title: {{ site.title | inspect }}<br>
-
+site markdown: {{ site.markdown | inspect }}<br>
 
 ---
 
@@ -37,7 +37,8 @@ site title: {{ site.title | inspect }}<br>
 {% include common/data/labels.html %}
 {%- for label in labels -%}
     <h2>{{- label -}}</h2>
-    {%- include common/data/publications.html label=label -%}
+    {%- comment -%} All URLs {%- endcomment -%}
+    {%- assign publications = site[label] -%}
     {%- if publications -%}
         <ul>
         {%- for publication in publications -%}
