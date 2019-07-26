@@ -2,6 +2,8 @@
     position: fixed;
     right: 0;
     bottom: 0;
+    margin-right: 15px;
+    margin-bottom: 45px;
 }
 
 .fab-area > .container {

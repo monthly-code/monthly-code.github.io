@@ -1,5 +1,5 @@
 <li class="{{- include.item_name -}}">
-    <p><em>{{- include.label | escape -}}</em> | <em>{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
+    <p><em class="common-item-collection">{{- include.label | escape -}}</em> | <em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
 
     {%- comment -%}
     <p>
@@ -9,8 +9,8 @@
     </p>
     {%- endcomment -%}
     
-    <a href="{{- include.item.url | escape | downcase -}}"><p class="item-title">{{- include.item.title | strip_html -}}</p></a>
-    <p class="item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
+    <a href="{{- include.item.url | relative_url -}}"><p class="common-item-title">{{- include.item.title | strip_html -}}</p></a>
+    <p class="common-item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
     
     {%- comment -%}
     <p>

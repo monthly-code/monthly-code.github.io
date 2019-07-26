@@ -1,35 +1,50 @@
 .header-area {
-
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.85);
 }
 
 .header-area > .container {
+    padding: 0 8%;
+}
+
+.header-area > .container > .header-logo-area {
+    display: inline-block;
+    
+}
+
+.header-area > .container > .header-logo-area > .header-logo {
+    text-align: center;
+    line-height: 70px;
+    text-transform: lowercase;
+}
+
+.header-area > .container > .header-nav-area {
 
 }
 
 .main-area {
-    position: relative;
-    padding: 20px;
+    margin-top: calc(70px + 3%);
 }
 
 .main-area > .container {
-
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .footer-area {
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    
 }
 
 .footer-area > .container {
-    background: #777;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .footer-area > .container > .account-area {
     display: inline-block;
-    position: relative;
-    left: 25%;
 }
 
 .footer-area > .container > .account-area > .account-items {
@@ -46,11 +61,11 @@
 }
 
 .footer-area > .container > .account-area > .account-items > .account-item > a > i {
-    color: white;
+    color: #777;
 }
 
 .footer-area > .container > .copyright-area {
     display: inline-block;
-    position: relative;
-    color: white;
+    color: #777;
+    font-size: 16px;
 }

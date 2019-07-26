@@ -1,0 +1,48 @@
+.prevnext-area {
+
+}
+
+.prevnext-area > .container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.prevnext-area > .container > .prevnext-items {
+    padding: 0;
+    font-size: 0;
+    list-style-type: none;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item {
+    display: inline-block;
+    width: 50%;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area {
+
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container {
+    text-align: center;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > p > .prevnext-item-collection {
+    font-size: 14px;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > p > .prevnext-item-date {
+    font-size: 14px;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > .prevnext-item-category {
+    font-size: 14px;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > a > .prevnext-item-title {
+    font-size: 20px;
+}
+
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > .prevnext-item-excerpt {
+    font-size: 16px;
+    color: #aaa;
+}

@@ -1,14 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     word-break: break-all;
     font-family: 'Heebo', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 img {
