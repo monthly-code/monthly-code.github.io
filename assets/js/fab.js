@@ -32,3 +32,22 @@ window.addEventListener('scroll', ()=>{
         isVisible = false
     }
 })
+
+moveScroll = (destination, duration)=>{
+    const height = window.scrollY,
+          step = Math.PI / (duration / 15),
+          cosParam = height / 2
+
+    var count = 0,
+        margin,
+        interval = setInterval(function(){
+            if(window.scrollY != destination) {
+                count += 1
+                margin = cosParam - cosParam * Math.cos(count * step)
+                window.scrollTo(0 ,(height - margin))
+            }
+            else clearInterval(interval)
+        }, 15)
+}
+
+document.getElementById('fabTop').addEventListener('click', moveScroll.bind(null, 0, 500))

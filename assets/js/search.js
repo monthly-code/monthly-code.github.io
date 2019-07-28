@@ -1,4 +1,19 @@
-/// search script
+addClass = (element, className)=>{
+    if(element.className.indexOf(className) == -1) {
+        element.className += " " + className
+    }
+}
+
+delClass = (element, className)=>{
+    let arr = element.className.split(" ")
+
+    while(arr.indexOf(className) > -1) {
+        arr.splice(arr.indexOf(className), 1)
+    }
+
+    element.className = arr.join(" ")
+}
+
 getJSON = (filePath, callback)=>{
     var fileReader = new XMLHttpRequest();
 	fileReader.open('GET', filePath, true);
@@ -11,12 +26,12 @@ getJSON = (filePath, callback)=>{
 }
 
 searchSite = ()=>{
-    var searcher = document.getElementById('searcher');
-    var query = searcher.value.trim();
+    var searchBar = document.getElementById('searchBar');
+    var query = searchBar.value.trim();
     // console.log(query);
 
     if(query.length < 1) {
-        searcher.blur();
+        searchBar.blur();
         return;
     }
 
@@ -109,67 +124,72 @@ searchSite = ()=>{
         searchResult.innerHTML = result_html;
     });
 
-    var searchNav = document.getElementById('searchNav');
-    addClass(searchNav, 'show');
+    var searchResult = document.getElementById('searchResult');
+    addClass(searchResult, 'show');
 
     // 아래 함수는 IE가 지원하지 않아 다시 되돌림
-    // document.getElementById('searchNav').classList.toggle('show', true);
+    // document.getElementById('searchResult').classList.toggle('show', true);
 }
-
-document.getElementById('searcher').addEventListener('keyup', e=>{
-    if( e.keyCode !== 13 ) return;
-    searchSite();
-});
-
-document.getElementById('goToSearchBtn').addEventListener('click', ()=>{
-
-    var search = document.getElementById('searcher');
-
-    if(search.value.trim().length < 1) {
-        showToggleClass(search);
-        if(search.classList.contains('show')) {
-            search.autofocus = true;
-        }
-    } else {
-        if(!search.classList.contains('show')) {
-            showToggleClass(search);
-            search.autofocus = true;
-        } else {
-            searchSite();
-        }
-    }
-});
 
 window.onkeyup = (e)=>{
-    // console.log(e.keyCode);
-
     if(e.keyCode == 27) {
-        var searchNav = document.getElementById('searchNav');
-        var search = document.getElementById('searcher');
+        let searchResult = document.getElementById('searchResult');
+        let searchBar = document.getElementById('searchBar');
 
-        if(search.classList.contains('show')) {
-            search.classList.remove('show');
-        } else if(searchNav.classList.contains('show')) {
-            searchNav.classList.remove('show');
+        if(searchBar.classList.contains('show')) {
+            delClass('show')
+            addClass('hide')
+            searchBar.classList.remove('show')
         } else {
 
         }
     }
 }
 
+document.getElementById('fabSearch').addEventListener('click', ()=>{
+    let searchBar = document.getElementById('searchBar')
+    let query = searchBar.value.trim()
+    if(query.length < 1) {
+        delClass('show')
+        addClass('hide')
+        
+        searchBar.autofocus = true
+    } else {
+        if(searchBar.classList.contains('show')) {
+            delClass('hide')
+            addClass('show')
+            
+            searchBar.autofocus = true
+        }
+        else searchSite()
+    }
+})
+
+document.getElementById('searchBar').addEventListener('keyup', e=>{
+    if( e.keyCode !== 13 ) return;
+    searchSite();
+})
+
 document.getElementById('searchExtend').addEventListener('click', ()=>{
-    var searchNav = document.getElementById('searchNav');
-    var searchExtend = document.getElementById('searchExtend');
-    var extendIcon = document.getElementById('extendIcon');
-    if(searchNav.classList.contains('extend')){
-        removeClass(searchNav, 'extend');
-        removeClass(searchExtend, 'extended');
-        removeClass(extendIcon, 'fa-angle-double-left');
+    let searchResult = document.getElementById('searchResult');
+    let searchExtend = document.getElementById('searchExtend');
+    let extendIcon = document.getElementById('extendIcon');
+    if(searchResult.classList.contains('extend')){
+        delClass(searchResult, 'extend');
+        delClass(searchExtend, 'extended');
+        delClass(extendIcon, 'fa-angle-double-left');
         addClass(extendIcon, 'fa-angle-double-right');
     } else {
-        addClass(searchNav, 'extend');
+        addClass(searchResult, 'extend');
         addClass(searchExtend, 'extended');
-        removeClass(extendIcon, 'fa-angle-double-right');
+        delClass(extendIcon, 'fa-angle-double-right');
         addClass(extendIcon, 'fa-angle-double-left');
+    }
+});
+
+document.getElementById('searchClose').addEventListener('click', ()=>{
+    let searchNav = document.getElementById('searchNav');
+    if(searchNav.classList.contains('show')) {
+        delClass(searchNav, 'show');
     }
 });

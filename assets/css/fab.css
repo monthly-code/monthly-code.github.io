@@ -10,8 +10,16 @@
     margin: 10px;
 }
 
-.fab-area > .container > .search-bar {
+.fab-area > .container > .searh-bar {
+    
+}
+
+.fab-area > .container > .search-bar.hide {
     display: none;
+}
+
+.fab-area > .container > .search-bar.show {
+    display: block;
 }
 
 .fab-area > .container > .fab-items {
