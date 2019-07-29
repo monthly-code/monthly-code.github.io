@@ -16,6 +16,9 @@ port:
 url: 
 baseurl: 
 
+# Search
+search: true
+
 # Site Info Setting
 title: monthly code's site
 intro: >

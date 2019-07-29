@@ -38,3 +38,33 @@ blockquote {
     margin: 15px auto;
     padding-left: 15px;
 }
+
+.common-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+.common-items > .common-item {
+    padding: 5% 3%;
+    border-bottom: 1px solid #aaa;
+}
+
+.common-items > .common-item:last-child {
+    border: none;
+}
+
+.common-items > .common-item > p > .common-item-collection {
+    font-size: 16px;
+}
+
+.common-items > .common-item > p > .common-item-date {
+    font-size: 16px;
+}
+
+.common-items > .common-item > a > .common-item-title {
+    font-size: 24px;
+}
+
+.common-items > .common-item > .common-item-excerpt {
+    font-size: 18px;
+}

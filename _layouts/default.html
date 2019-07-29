@@ -13,6 +13,9 @@
             {{- content -}}
         </div>
     </main>
+    {%- if site.search -%}
+        {%- include addon/search/result.html -%}
+    {%- endif -%}
     {%- include addon/fab/main.html -%}
     {%- include base/footer.html -%}
     <!-- <script src="/assets/js/main.js"></script> -->

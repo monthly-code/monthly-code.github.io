@@ -25,9 +25,10 @@
 
 <link rel="stylesheet" href="/assets/css/common.css">
 <link rel="stylesheet" href="/assets/css/base.css">
-<link rel="stylesheet" href="/assets/css/fab.css">
 <link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/fab.css">
 <link rel="stylesheet" href="/assets/css/prevnext.css">
+<link rel="stylesheet" href="/assets/css/collection.css">
 {%- comment -%}
 <link rel="stylesheet" href="/assets/css/main.css">
 <link rel="stylesheet" href="/assets/css/header.css">
@@ -44,4 +45,6 @@
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script defer src="/assets/js/fab.js"></script>
-<script defer src="/assets/js/search.js"></script>
+{%- if site.search -%}
+    <script defer src="/assets/js/search.js"></script>
+{%- endif -%}

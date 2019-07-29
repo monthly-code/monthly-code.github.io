@@ -137,8 +137,8 @@ window.onkeyup = (e)=>{
         let searchBar = document.getElementById('searchBar');
 
         if(searchBar.classList.contains('show')) {
-            delClass('show')
-            addClass('hide')
+            delClass(searchBar, 'show')
+            addClass(searchBar, 'hide')
             searchBar.classList.remove('show')
         } else {
 
@@ -149,15 +149,19 @@ window.onkeyup = (e)=>{
 document.getElementById('fabSearch').addEventListener('click', ()=>{
     let searchBar = document.getElementById('searchBar')
     let query = searchBar.value.trim()
+
     if(query.length < 1) {
-        delClass('show')
-        addClass('hide')
-        
-        searchBar.autofocus = true
+        if(!searchBar.classList.contains('show')) {
+            delClass(searchBar, 'hide')
+            addClass(searchBar, 'show')
+        }else {
+            delClass(searchBar, 'show')
+            addClass(searchBar, 'hide')
+        }
     } else {
-        if(searchBar.classList.contains('show')) {
-            delClass('hide')
-            addClass('show')
+        if(!searchBar.classList.contains('show')) {
+            delClass(searchBar, 'hide')
+            addClass(searchBar, 'show')
             
             searchBar.autofocus = true
         }
@@ -166,8 +170,8 @@ document.getElementById('fabSearch').addEventListener('click', ()=>{
 })
 
 document.getElementById('searchBar').addEventListener('keyup', e=>{
-    if( e.keyCode !== 13 ) return;
-    searchSite();
+    if( e.keyCode === 13 ) searchSite()
+    
 })
 
 document.getElementById('searchExtend').addEventListener('click', ()=>{

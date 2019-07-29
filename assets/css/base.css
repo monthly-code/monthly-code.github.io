@@ -10,6 +10,14 @@
     padding: 0 8%;
 }
 
+.header-area > .container::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    border-bottom: 1px solid #777;
+}
+
 .header-area > .container > .header-logo-area {
     display: inline-block;
     
@@ -30,8 +38,12 @@
 }
 
 .main-area > .container {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: auto 8%;
+}
+
+.main-area > .container > section {
+    padding: 0 3%;
 }
 
 .footer-area {
@@ -39,8 +51,8 @@
 }
 
 .footer-area > .container {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: auto 8%;
 }
 
 .footer-area > .container > .account-area {

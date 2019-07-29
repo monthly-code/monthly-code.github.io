@@ -1,0 +1,38 @@
+.collection-area {
+
+}
+
+/* For Normal Collections */
+
+.collection-area > .collection-items {
+    list-style-type: none;
+}
+
+.collection-area > .collection-items > .collection-item {
+
+}
+
+.collection-area > .collection-empty {
+
+}
+
+/* For Docs Collections */
+.collection-area > .collection-labels {
+    list-style-type: none;
+    padding: 0;
+}
+
+.collection-area > .collection-labels > .collection-label {
+    margin: 3% 5%;
+}
+
+.collection-area > .collection-labels > .collection-label > .common-items {
+    list-style-type: none;
+    padding: 0;    
+}
+
+.collection-area > .collection-labels > .collection-label > .common-items > .common-item {
+    padding: 5% 3%;
+    border-bottom: 1px solid #aaa;
+}
+

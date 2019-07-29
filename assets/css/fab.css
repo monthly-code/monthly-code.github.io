@@ -10,8 +10,27 @@
     margin: 10px;
 }
 
-.fab-area > .container > .searh-bar {
-    
+.fab-area > .container > .search-bar {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    color: #777;
+    border: 2px solid #777;
+    border-radius: 22.5px;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    transition: all 0.5s;
+    /* transition: left 0.5s ease, width 0.5s ease; */
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .fab-area > .container > .search-bar.hide {
@@ -20,10 +39,30 @@
 
 .fab-area > .container > .search-bar.show {
     display: block;
+    width: 500px;
+    left: -440px;
+    padding: 0 60px 0 30px;
+    opacity: 1;
+    cursor: text;
+}
+
+.fab-area > .container > .search-bar::placeholder {
+    color: #777;
+}
+
+.fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search:hover {
+    background: white;
+    opacity: 1;
+}
+
+.fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search > a > i {
+    color: #777;
 }
 
 .fab-area > .container > .fab-items {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .fab-area > .container > .fab-items > .fab-item {
@@ -54,7 +93,7 @@
 }
 
 .fab-area > .container > .fab-items > .fab-item > a {
-    width: 100%;
+    width: 100;
     height: 100%;
 }
 
@@ -70,4 +109,8 @@
 .fab-area > .container > .fab-items > .fab-item:hover > a > i,
 .fab-area > .container > .fab-items > .fab-item:focus > a > i {
     color: white;
+}
+
+.fab-area > .container > .fab-items > .fab-item.fab-search:hover {
+    opacity: 0.5;
 }

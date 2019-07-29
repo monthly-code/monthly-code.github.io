@@ -4,36 +4,14 @@
 
 .home-area > .home-items {
     list-style-type: none;
+    padding: 0;
 }
 
 .home-area > .home-items > .home-item {
-
+    margin: 3% 5%;
+    border-bottom: 1px solid #aaa;
 }
 
 .home-area > .home-items > .home-item > .home-collection-label {
     color: #3f3f3f;
-}
-
-.home-area > .home-items > .home-item > .home-collection-items {
-    list-style-type: none;
-}
-
-.home-area > .home-items > .home-item > .home-collection-items > .home-collection-item {
-    
-}
-
-.home-area > .home-items > .home-item > .home-collection-items > .home-collection-item > p > .common-item-collection {
-    font-size: 16px;
-}
-
-.home-area > .home-items > .home-item > .home-collection-items > .home-collection-item > p > .common-item-date {
-    font-size: 16px;
-}
-
-.home-area > .home-items > .home-item > .home-collection-items > .home-collection-item > a > .common-item-title {
-    font-size: 24px;
-}
-
-.home-area > .home-items > .home-item > .home-collection-items > .home-collection-item > .common-item-excerpt {
-    font-size: 18px;
 }

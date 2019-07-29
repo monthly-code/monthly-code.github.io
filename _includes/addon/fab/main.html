@@ -1,10 +1,14 @@
 <div class="fab-area">
     <div class="container">
-        {%- include addon/search/bar.html -%}
+        {%- if site.search -%}
+            {%- include addon/search/bar.html -%}
+        {%- endif -%}
         <ul class="fab-items">
             {%- include addon/fab/top.html -%}
             {%-comment-%}{%- include addon/fab/invert.html -%}{%-endcomment-%}
-            {%- include addon/fab/search.html -%}
+            {%- if site.search -%}
+                {%- include addon/fab/search.html -%}
+            {%- endif -%}
         </ul>
     </div>
 </div>

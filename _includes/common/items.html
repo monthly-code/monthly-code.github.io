@@ -1,5 +1,15 @@
+<ul class="common-items">
+    {%- assign default_limit = include.items | size -%}
+    {%- assign limit = include.limit | default: default_limit -%}
+    {%- for item in include.items | limit: limit -%}
+        {%- include common/item.html item=item label=include.label -%}
+    {%- endfor -%}
+</ul>
+
+{%- comment -%}
 <ul class="{{- include.items_name -}}">
     {%- for item in include.items -%}
         {%- include common/item.html item_name=include.item_name item=item label=include.label -%}
     {%- endfor -%}
 </ul>
+{%- endcomment -%}
