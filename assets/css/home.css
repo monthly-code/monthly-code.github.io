@@ -12,6 +12,10 @@
     border-bottom: 1px solid #aaa;
 }
 
+.home-area > .home-items > .home-item:last-child {
+    border: none;
+}
+
 .home-area > .home-items > .home-item > .home-collection-label {
     color: #3f3f3f;
 }

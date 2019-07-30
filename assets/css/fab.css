@@ -49,13 +49,26 @@
 .fab-area > .container > .search-bar::placeholder {
     color: #777;
 }
-
+/*
 .fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search:hover {
-    background: white;
+    background: #777;
     opacity: 1;
 }
 
 .fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search > a > i {
+    color: white;
+}
+*/
+.fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search:hover {
+    background: #777;
+    opacity: 1;
+}
+
+.fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search:hover > a > i {
+    color: white;
+}
+
+.fab-area > .container > .search-bar.show ~ .fab-items > .fab-item.fab-search:hover > a > i {
     color: #777;
 }
 

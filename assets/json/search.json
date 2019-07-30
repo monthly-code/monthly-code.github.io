@@ -10,13 +10,13 @@
   {%- for publication in publications -%}
   {% unless forloop.first %}, {% endunless %}
   {
-    "collection" : "{{- publication.collection | escape -}}",
-    "title"      : "{{- publication.title | escape -}}",
-    "subtitle"   : "{{- publication.subtitle | escape -}}",
+    "url"        : "{{- site.baseurl -}}{{- publication.url -}}",
+    "collection" : "{{- publication.collection | strip_html -}}",
+    "title"      : "{{- publication.title | strip_html -}}",
     "categories" : "{{- publication.categories | join: ', ' -}}",
     "tags"       : "{{- publication.tags | join: ', ' -}}",
-    "url"        : "{{- site.baseurl -}}{{- publication.url -}}",
     "date"       : "{{- publication.date -}}",
+    "excerpt"    : {{- publication.excerpt | strip_html | jsonify -}},
     "contents"   : {{- publication.content | strip_html | strip_newlines | jsonify -}}
   }
   {%- endfor -%}

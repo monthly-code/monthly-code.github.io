@@ -37,9 +37,9 @@ searchSite = ()=>{
 
     //- searching area
 
-    var searchResult = document.getElementById('searchResult');
-    while(searchResult.hasChildNodes()) {
-        searchResult.removeChild(searchResult.firstChild);
+    var searchedItems = document.getElementById('searchedItems');
+    while(searchedItems.hasChildNodes()) {
+        searchedItems.removeChild(searchedItems.firstChild);
     }
 
     //- match data from search.json
@@ -107,9 +107,9 @@ searchSite = ()=>{
                         result_html+=`
                         </p>
                         <p class="item-title">${result_datum["title"]}</p>
-                        <p class="item-subtitle">${result_datum["subtitle"]}</p>
-                        <p class="item-content">${result_datum["contents"].substring(0, 25)+"..."}</p>
-                    </a>
+                        <p class="item-excerpt">${result_datum["excerpt"]}</p>`+
+                        // <p class="item-content">${result_datum["contents"].substring(0, 25)+"..."}</p>
+                    `</a>
                 </li>
                 `;
             }
@@ -121,11 +121,12 @@ searchSite = ()=>{
             result_html+='</ul>';
         }
 
-        searchResult.innerHTML = result_html;
+        searchedItems.innerHTML = result_html;
     });
 
-    var searchResult = document.getElementById('searchResult');
-    addClass(searchResult, 'show');
+    var searchResult = document.getElementById('searchResult')
+    delClass(searchResult, 'hide')
+    addClass(searchResult, 'show')
 
     // 아래 함수는 IE가 지원하지 않아 다시 되돌림
     // document.getElementById('searchResult').classList.toggle('show', true);
@@ -192,8 +193,9 @@ document.getElementById('searchExtend').addEventListener('click', ()=>{
 });
 
 document.getElementById('searchClose').addEventListener('click', ()=>{
-    let searchNav = document.getElementById('searchNav');
-    if(searchNav.classList.contains('show')) {
-        delClass(searchNav, 'show');
+    let searchResult = document.getElementById('searchResult')
+    if(searchResult.classList.contains('show')) {
+        delClass(searchResult, 'show')
+        addClass(searchResult, 'hide')
     }
 });
