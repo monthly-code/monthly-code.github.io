@@ -199,3 +199,11 @@ document.getElementById('searchClose').addEventListener('click', ()=>{
         addClass(searchResult, 'hide')
     }
 });
+
+document.getElementById('searchEmpty').addEventListener('click', ()=>{
+    let searchResult = document.getElementById('searchResult')
+    if(searchResult.classList.contains('show')) {
+        delClass(searchResult, 'show')
+        addClass(searchResult, 'hide')
+    }
+})

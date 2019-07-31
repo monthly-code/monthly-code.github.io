@@ -5,6 +5,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    max-height: 100%;
     overflow-y: auto;
 }
 
@@ -20,18 +21,20 @@
 
 .search-result-area > .container {
     display: inline-block;
-    min-width: 350px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     font-size: 0px;
-    padding: 10px;
-    background: rgba(221, 221, 221, 0.9);
 }
 
 .search-result-area > .container > .result-area {
     display: inline-block;
-    width: 100%;
+    width: 350px;
     vertical-align: middle;
     direction: ltr;
     font-size: 16px;
+    background: rgba(221, 221, 221, 1);
 }
 
 .search-result-area > .container > .result-area ul {
@@ -39,7 +42,6 @@
 }
 
 .search-result-area > .container > .result-area li {
-    
     padding: 5% 3%;
     border-bottom: 1px solid #aaa;
 }
@@ -48,28 +50,40 @@
     border: none;
 }
 
-.search-result-area > .container > .search-extend-area {
-    display: none;
-    /* display: inline-block; */
+.search-result-area > .container > .search-empty-area {
+    display: inline-block;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: -8px;
-    font-size: 16px;
-    overflow-y: unset;
+    min-height: 100%;
+    left: 350px;
+    right: 0;
+    overflow: hidden;
+    background: rgba(31, 31, 31, 0.9);
 }
 
-.search-result-area > .container > .search-extend-area > .search-extend {
+.search-result-area > .search-extend-area {
+    display: inline-block;
+    position: fixed;
+    width: 20px;
+    left: 350px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: -10px;
+    font-size: 16px;
+}
+
+.search-result-area > .search-extend-area > .search-extend {
     display: block;
     cursor: pointer;
 }
 
 .search-result-area > .search-close-area {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 12px;
-    margin-left: 12px;
+    display: inline-block;
+    position: fixed;
+    width: 20px;
+    left: 370px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
     font-size: 16px;
 }
 
@@ -77,3 +91,4 @@
     display: block;
     cursor: pointer;
 }
+
