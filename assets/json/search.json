@@ -17,7 +17,7 @@
     "tags"       : "{{- publication.tags | join: ', ' -}}",
     "date"       : "{{- publication.date -}}",
     "excerpt"    : {{- publication.excerpt | strip_html | jsonify -}},
-    "contents"   : {{- publication.content | strip_html | strip_newlines | jsonify -}}
+    "content"    : {{- publication.content | strip_html | strip_newlines | jsonify -}}
   }
   {%- endfor -%}
 {% endfor %}

@@ -39,7 +39,8 @@
 
 .main-area > .container {
     max-width: 900px;
-    margin: auto 8%;
+    margin: 0 auto;
+    /* margin: auto 8%; */
 }
 
 .main-area > .container > section {

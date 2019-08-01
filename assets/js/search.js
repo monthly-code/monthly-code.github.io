@@ -14,115 +14,106 @@ delClass = (element, className)=>{
     element.className = arr.join(" ")
 }
 
-getJSON = (filePath, callback)=>{
-    var fileReader = new XMLHttpRequest();
-	fileReader.open('GET', filePath, true);
+getSearchLibrary = (filePath, callback)=>{
+    var fileReader = new XMLHttpRequest()
+	fileReader.open('GET', filePath, true)
     fileReader.onreadystatechange = ()=>{
         if (fileReader.readyState == 4 && fileReader.status == 200) {
-            callback(JSON.parse(fileReader.responseText));
+            callback(JSON.parse(fileReader.responseText))
         }
     }
-    fileReader.send(null);
+    fileReader.send(null)
 }
 
-searchSite = ()=>{
-    var searchBar = document.getElementById('searchBar');
-    var query = searchBar.value.trim();
-    // console.log(query);
+searchingLibrary = ()=>{
+    var searchBar = document.getElementById('searchBar')
+    var query = searchBar.value.trim()
 
     if(query.length < 1) {
-        searchBar.blur();
-        return;
+        searchBar.blur()
+        return
     }
 
     //- searching area
-
-    var searchedItems = document.getElementById('searchedItems');
-    while(searchedItems.hasChildNodes()) {
-        searchedItems.removeChild(searchedItems.firstChild);
+    var searchArea = document.getElementById('searchedItems')
+    while(searchArea.hasChildNodes()) {
+        searchArea.removeChild(searchArea.firstChild)
     }
 
     //- match data from search.json
+    getSearchLibrary('/assets/json/search.json', (items)=>{
+        var searchHTML = ''
 
-    getJSON('/assets/json/search.json', (data)=>{
-        // console.log(data);
-        var result_html = '';
-
-        result_data = [];
-        collections = [];
-        for(var datum of data) {
-            let isFind = false;
+        searchedItems = []
+        collections = []
+        for(var item of items) {
+            let isFind = false
             // console.log(datum);
-            let datum_keys = Object.getOwnPropertyNames(datum);
+            let item_keys = Object.getOwnPropertyNames(item)
             // console.log(datum_keys);
-            for(var key of datum_keys) {
+            for(var key of item_keys) {
                 // console.log(key);
                 if(key == 'collection') {
                     // console.log(datum[key]);
-                    if(collections.indexOf(datum[key]) == -1) {
-                        collections.push(datum[key]);
+                    if(collections.indexOf(item[key]) == -1) {
+                        collections.push(item[key])
                     }
                 }
 
-                if(key == 'collection' || key == 'url') continue;
-                if(datum[key].indexOf(query) != -1) {
-                    isFind = true;
-                    break;
+                if(key == 'collection' || key == 'url') continue
+                if(item[key].indexOf(query) != -1) {
+                    isFind = true
+                    break
                 }
             }
-            if(!isFind) continue;
-            result_data.push(datum);
+            if(!isFind) continue
+            searchedItems.push(item)
         }
 
         // console.log(collections);
-
         for(var collection of collections) {
-            result_html +=
+            searchHTML +=
             `
             <h3 class="search-collection">${collection}</h3>
-            <ul class="search-list">`;
+            <ul class="search-list">`
 
-            var isResult = false;
+            var isResult = false
 
-            for(var result_datum of result_data) {
+            for(var searchedItem of searchedItems) {
                 // console.log(result_datum);
-                if(result_datum["collection"] != collection) {
-                    continue;
-                }
+                if(searchedItem["collection"] != collection) continue
 
-                if(!isResult) {
-                    isResult = true;
-                }
+                if(!isResult) isResult = true
 
-                result_html += 
+                searchHTML += 
                 `
                 <li class="search-item">
-                    <a href="${result_datum["url"]}">
-                        <p class="item-categories">`;
-                        if(result_datum["categories"].trim().length > 0) {
-                            for(var category of result_datum["categories"].split(',')) {
-                                result_html+=`<span class="item-category">${category}</span>`
+                    <a href="${searchedItem["url"]}">
+                        <p class="item-categories">`
+                        if(searchedItem["categories"].trim().length > 0) {
+                            for(var category of searchedItem["categories"].split(',')) {
+                                searchHTML+=`<span class="item-category">${category}</span>`
                             }
                         }
-                        result_html+=`
+                        searchHTML+=`
                         </p>
-                        <p class="item-title">${result_datum["title"]}</p>
-                        <p class="item-excerpt">${result_datum["excerpt"]}</p>`+
+                        <p class="item-title">${searchedItem["title"]}</p>
+                        <p class="item-excerpt">${searchedItem["excerpt"]}</p>`+
                         // <p class="item-content">${result_datum["contents"].substring(0, 25)+"..."}</p>
                     `</a>
                 </li>
-                `;
+                `
             }
 
             if(!isResult) {
-                result_html+='<li class="search-item search-empty">Not Found Data</li>';
+                searchHTML+='<li class="search-item search-empty">Not Found Data</li>'
             }
 
-            result_html+='</ul>';
+            searchHTML+='</ul>'
         }
 
-        searchedItems.innerHTML = result_html;
-    });
+        searchArea.innerHTML = searchHTML
+    })
 
     var searchResult = document.getElementById('searchResult')
     delClass(searchResult, 'hide')
@@ -134,8 +125,8 @@ searchSite = ()=>{
 
 window.onkeyup = (e)=>{
     if(e.keyCode == 27) {
-        let searchResult = document.getElementById('searchResult');
-        let searchBar = document.getElementById('searchBar');
+        let searchResult = document.getElementById('searchResult')
+        let searchBar = document.getElementById('searchBar')
 
         if(searchBar.classList.contains('show')) {
             delClass(searchBar, 'show')
@@ -166,31 +157,31 @@ document.getElementById('fabSearch').addEventListener('click', ()=>{
             
             searchBar.autofocus = true
         }
-        else searchSite()
+        else searchingLibrary()
     }
 })
 
 document.getElementById('searchBar').addEventListener('keyup', e=>{
-    if( e.keyCode === 13 ) searchSite()
+    if( e.keyCode === 13 ) searchingLibrary()
     
 })
 
 document.getElementById('searchExtend').addEventListener('click', ()=>{
-    let searchResult = document.getElementById('searchResult');
-    let searchExtend = document.getElementById('searchExtend');
-    let extendIcon = document.getElementById('extendIcon');
+    let searchResult = document.getElementById('searchResult')
+    let searchExtend = document.getElementById('searchExtend')
+    let extendIcon = document.getElementById('extendIcon')
     if(searchResult.classList.contains('extend')){
-        delClass(searchResult, 'extend');
-        delClass(searchExtend, 'extended');
-        delClass(extendIcon, 'fa-angle-double-left');
-        addClass(extendIcon, 'fa-angle-double-right');
+        delClass(searchResult, 'extend')
+        delClass(searchExtend, 'extended')
+        delClass(extendIcon, 'fa-angle-double-left')
+        addClass(extendIcon, 'fa-angle-double-right')
     } else {
-        addClass(searchResult, 'extend');
-        addClass(searchExtend, 'extended');
-        delClass(extendIcon, 'fa-angle-double-right');
-        addClass(extendIcon, 'fa-angle-double-left');
+        addClass(searchResult, 'extend')
+        addClass(searchExtend, 'extended')
+        addClass(extendIcon, 'fa-angle-double-left')
+        delClass(extendIcon, 'fa-angle-double-right')
     }
-});
+})
 
 document.getElementById('searchClose').addEventListener('click', ()=>{
     let searchResult = document.getElementById('searchResult')
@@ -198,7 +189,7 @@ document.getElementById('searchClose').addEventListener('click', ()=>{
         delClass(searchResult, 'show')
         addClass(searchResult, 'hide')
     }
-});
+})
 
 document.getElementById('searchEmpty').addEventListener('click', ()=>{
     let searchResult = document.getElementById('searchResult')

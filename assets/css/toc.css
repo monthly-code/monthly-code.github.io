@@ -1,0 +1,53 @@
+.toc-area {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@media(max-width: 900px) {
+    .toc-area {
+        display: none;
+    }
+}
+
+.toc-area > .container {
+    margin-left: 25px;
+}
+
+.toc-area > .container > .toc-items {
+    list-style-type: none;
+}
+
+.toc-area > .container > .toc-items > .toc-item {
+    margin: 5px 0px;
+    cursor: pointer;
+}
+
+.toc-area > .container > .toc-items > .toc-item:hover {
+    color: #aaa;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-highlight {
+    color: royalblue;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-title {
+    font-weight: bold;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h1 {
+    
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h2 {
+    margin-left: 10px;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h2::before {
+    
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h3 {
+    margin-left: 25px;
+}
