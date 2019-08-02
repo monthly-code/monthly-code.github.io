@@ -1,4 +1,5 @@
 .toc-area {
+    display: block;
     position: fixed;
     top: 50%;
     left: 0;

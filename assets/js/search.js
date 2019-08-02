@@ -123,6 +123,10 @@ searchingLibrary = ()=>{
     // document.getElementById('searchResult').classList.toggle('show', true);
 }
 
+fixIcon = (element)=>{
+    element.style;
+}
+
 window.onkeyup = (e)=>{
     if(e.keyCode == 27) {
         let searchResult = document.getElementById('searchResult')

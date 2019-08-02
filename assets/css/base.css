@@ -47,6 +47,10 @@
     padding: 0 3%;
 }
 
+.main-area > .container > .content-area {
+    min-height: 500px;   
+}
+
 .footer-area {
     
 }

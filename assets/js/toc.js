@@ -14,16 +14,17 @@ delClass = (element, className)=>{
     element.className = arr.join(" ")
 }
 
-moveScroll = (destination, duration=1)=>{
+moveScrollContent = (destination, duration)=>{
     const height = window.scrollY,
           step = Math.PI / (duration / 15),
           cosParam = height / 2
 
-    var count = 0,
+    var count = 1,
         margin,
         interval = setInterval(function(){
-            if(window.scrollY != destination) {
-                count += 1
+            // console.log(`diff: ${Math.abs(window.scrollY - destination)}`)
+            if(Math.abs(window.scrollY - destination) > count * step) {
+                count+=1
                 margin = cosParam - cosParam * Math.cos(count * step)
                 window.scrollTo(0 ,(height - margin))
             }
@@ -43,9 +44,9 @@ setContents = ()=>{
                 continue;
             } else {
                 if(element.className == 'page-title') {
-                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()} toc-title" id="toc-${count++}" onclick="moveScroll(${element.offsetTop})">${element.innerText}</li>`
+                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()} toc-title" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)">${element.innerText}</li>`
                 } else {
-                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()}" id="toc-${count++}" onclick="moveScroll(${element.offsetTop})">${element.innerText}</li>`
+                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()}" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)">${element.innerText}</li>`
                 }
             }
         }
@@ -82,11 +83,13 @@ highlightContent = ()=>{
     }
 
     const height = window.scrollY
+    // console.log(`height: ${height}`)
 
     var idx = 1;
-    for(; idx <= tocSize; idx++) {
+    for(; idx <= contents.length; idx++) {
         if(contentsOffset[idx-1] <= height && height < contentsOffset[idx]) {
-            addClass(ontents[idx-1], 'highlight')
+            addClass(contents[idx-1], 'highlight')
+            // console.log(`content: ${contents[idx-1].innerText}`)
             return
         }
     }    

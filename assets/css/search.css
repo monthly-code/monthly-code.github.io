@@ -81,7 +81,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    transition: all .3s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 .search-result-area.show.extend > .search-extend-area {
@@ -104,7 +104,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    transition: all .3s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 
 .search-result-area.show.extend > .search-close-area {
