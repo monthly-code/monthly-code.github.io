@@ -1,9 +1,12 @@
+@import '/assets/css/open-color.css';
+
 .header-area {
     width: 100%;
     position: fixed;
     top: 0;
     height: 70px;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--oc-white); /*rgba(255, 255, 255, 0.85);*/
+    opacity: 0.85;
 }
 
 .header-area > .container {
@@ -15,7 +18,8 @@
     display: block;
     margin: 0 auto;
     height: 2px;
-    border-bottom: 1px solid #777;
+    border-bottom: 0.5px solid transparent;
+    border-color: var(--oc-gray-3);
 }
 
 .header-area > .container > .header-logo-area {
@@ -27,6 +31,11 @@
     text-align: center;
     line-height: 70px;
     text-transform: lowercase;
+    color: var(--oc-gray-5);
+}
+
+.header-area > .container > .header-logo-area > .header-logo:hover {
+    color: var(--oc-gray-9);
 }
 
 .header-area > .container > .header-nav-area {
@@ -81,11 +90,11 @@
 }
 
 .footer-area > .container > .account-area > .account-items > .account-item > a > i {
-    color: #777;
+    color: var(--oc-gray-7);
 }
 
 .footer-area > .container > .copyright-area {
     display: inline-block;
-    color: #777;
+    color: var(--oc-gray-7);
     font-size: 16px;
 }
