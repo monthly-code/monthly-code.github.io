@@ -52,12 +52,15 @@
 }
 
 .footer-area {
-    
+    display: block;
+    margin: 0 auto;
 }
 
 .footer-area > .container {
+    display: block;
     max-width: 900px;
-    margin: auto 8%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .footer-area > .container > .account-area {

@@ -36,6 +36,8 @@ setContents = ()=>{
     let tocArea = document.getElementById('tocItems')
     let tocHTML = ''
 
+    if(!tocArea) return;
+
     var count = 1
     for(element of document.all) {
         let re = /h[1-3]/i
@@ -51,7 +53,7 @@ setContents = ()=>{
             }
         }
     }
-
+    
     tocArea.innerHTML = tocHTML
 }
 
