@@ -132,3 +132,16 @@
 .fab-area > .container > .fab-items > .fab-item.fab-search:hover {
     opacity: 0.5;
 }
+
+@media (max-width: 1000px) {
+    .fab-area > .container > .fab-items > .fab-item {
+        opacity: .4;
+    }
+    .fab-area > .container > .fab-items > .fab-item.fab-top.show {
+        opacity: .4;
+    }
+
+    .fab-area > .container > .fab-items > .fab-item:hover.fab-top.show {
+        opacity: 1;
+    }
+}

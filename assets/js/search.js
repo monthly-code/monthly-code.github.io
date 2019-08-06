@@ -1,18 +1,18 @@
-addClass = (element, className)=>{
-    if(element.className.indexOf(className) == -1) {
-        element.className += " " + className
-    }
-}
+// addClass = (element, className)=>{
+//     if(element.className.indexOf(className) == -1) {
+//         element.className += " " + className
+//     }
+// }
 
-delClass = (element, className)=>{
-    let arr = element.className.split(" ")
+// delClass = (element, className)=>{
+//     let arr = element.className.split(" ")
 
-    while(arr.indexOf(className) > -1) {
-        arr.splice(arr.indexOf(className), 1)
-    }
+//     while(arr.indexOf(className) > -1) {
+//         arr.splice(arr.indexOf(className), 1)
+//     }
 
-    element.className = arr.join(" ")
-}
+//     element.className = arr.join(" ")
+// }
 
 getSearchLibrary = (filePath, callback)=>{
     var fileReader = new XMLHttpRequest()

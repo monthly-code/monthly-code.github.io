@@ -1,7 +1,7 @@
 ---
 ---
 <div class="home-area">
-    <h1>Recent</h1>
+    <h1>Newly</h1>
     <ul class="home-items">
     {%- include common/data/labels.html -%}
     {%- for label in published_labels -%}
@@ -11,7 +11,7 @@
             {%- comment -%}
             <h3 class="home-collection-label">{{- label | escape -}}</h3>
             {%- endcomment -%}
-            {%- include common/items.html items=reverse_sorted label=label limit=3 -%}
+            {%- include common/items.html items=reverse_sorted label=label limit=1 -%}
         </li>
         {%- endfor -%}
     </ul>
