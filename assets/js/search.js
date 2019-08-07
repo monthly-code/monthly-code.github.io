@@ -75,7 +75,7 @@ searchingLibrary = ()=>{
             searchHTML +=
             `
             <h3 class="search-collection">${collection}</h3>
-            <ul class="search-list">`
+            <ul class="search-items">`
 
             var isResult = false
 

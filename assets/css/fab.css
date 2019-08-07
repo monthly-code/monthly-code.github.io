@@ -66,11 +66,16 @@
 }
 
 .fab-area > .container > .search-bar ~ .fab-items > .fab-item.fab-search:hover > a > i {
-    color: white;
+    color: var(--oc-gray-0);
 }
 
 .fab-area > .container > .search-bar.show ~ .fab-items > .fab-item.fab-search > a > i {
-    color: var(--oc-gray-5);
+    color: var(--oc-gray-7);
+}
+
+.fab-area > .container > .search-bar.show ~ .fab-items > .fab-item.fab-search:hover {
+    background: var(--oc-gray-0);
+    opacity: 1;
 }
 
 .fab-area > .container > .search-bar.show ~ .fab-items > .fab-item.fab-search:hover > a > i {
@@ -126,7 +131,7 @@
 
 .fab-area > .container > .fab-items > .fab-item:hover > a > i,
 .fab-area > .container > .fab-items > .fab-item:focus > a > i {
-    color: white;
+    color: var(--oc-gray-0);
 }
 
 .fab-area > .container > .fab-items > .fab-item.fab-search:hover {

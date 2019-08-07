@@ -59,8 +59,9 @@ blockquote {
 
 .common-items > .common-item:hover {
     background: var(--oc-gray-1);
-    border: 1px solid transparent;
-    border-color: var(--oc-gray-1);
+    border: none;
+    /* border: 1px solid transparent;
+    border-color: var(--oc-gray-1); */
 }
 
 .common-items > .common-item > p > a > .common-item-collection {

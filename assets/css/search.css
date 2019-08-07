@@ -26,6 +26,7 @@
     left: 0;
     right: 0;
     font-size: 0px;
+    margin-top: 80px;
 }
 
 .search-result-area > .container > .result-area {
@@ -34,26 +35,38 @@
     vertical-align: middle;
     direction: ltr;
     font-size: 16px;
-    background: rgba(221, 221, 221, 1);
+    background: var(--oc-gray-3);
     transition: all .3s ease-in-out;
 }
 
 .search-result-area.show.extend > .container > .result-area {
     width: 90%;
     transition: all .3s ease-in-out;
+    padding-left: 10px;
 }
 
-.search-result-area > .container > .result-area ul {
+.search-result-area > .container > .result-area > h3 {
+    color: var(--oc-gray-5);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-result-area > .container > .result-area > .search-items {
     list-style-type: none;
 }
 
-.search-result-area > .container > .result-area li {
+.search-result-area > .container > .result-area > .search-items > .search-item {
     padding: 5% 3%;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid transparent;
+    border-color: var(--oc-gray-5);
 }
 
-.search-result-area > .container > .result-area li:last-child {
+.search-result-area > .container > .result-area > .search-items > .search-item:last-child {
     border: none;
+}
+
+.search-result-area > .container > .result-area > .search-items > .search-item > a > p {
+    color: var(--oc-gray-7);
 }
 
 .search-result-area > .container > .search-empty-area {
@@ -63,7 +76,8 @@
     left: 350px;
     right: 0;
     overflow: hidden;
-    background: rgba(31, 31, 31, 0.9);
+    background: var(--oc-gray-9);
+    opacity: 0.95;
 }
 
 .search-result-area.show.extend > .container > .search-empty-area {
@@ -95,6 +109,10 @@
     text-align: center;
 }
 
+.search-result-area > .search-extend-area > .search-extend > i {
+    color: var(--oc-gray-9);
+}
+
 .search-result-area > .search-close-area {
     display: inline-block;
     position: fixed;
@@ -119,6 +137,6 @@
 }
 
 .search-result-area > .search-close-area > .search-close > i {
-    color: white;
+    color: var(--oc-gray-0);
 }
 

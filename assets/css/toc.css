@@ -4,18 +4,8 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-}
-
-@media(max-width: 1000px) {
-    .toc-area {
-        display: none;
-    }
-}
-
-@media(max-width: 1200px) {
-    .toc-area {
-        opacity: 0.4;
-    }
+    max-width: 200px;
+    transition: all 0.5s;
 }
 
 .toc-area > .container {
@@ -24,45 +14,73 @@
 
 .toc-area > .container > .toc-items {
     list-style-type: none;
+    padding: 0;
 }
 
 .toc-area > .container > .toc-items > .toc-item {
     margin: 5px 0px;
     cursor: pointer;
-    color: var(--oc-gray-3);
-}
-
-.toc-area > .container > .toc-items > .toc-item:hover {
-    color: var(--oc-yellow-3);
+    color: var(--oc-gray-5);
 }
 
 .toc-area > .container > .toc-items > .toc-item.highlight {
     color: var(--oc-gray-9);
 }
 
+.toc-area > .container > .toc-items > .toc-item:hover {
+    color: var(--oc-teal-5);
+}
+
 .toc-area > .container > .toc-items > .toc-item.toc-title {
     font-weight: bold;
 }
 
-.toc-area > .container > .toc-items > .toc-item.toc-h1 {
-    
-}
-
-.toc-area > .container > .toc-items > .toc-item::before {
-    content:"";
-    display: block;
-    width: 10px;
-    height: 2px;
-    left: 0;
-    top: 0;
-    background: var(--oc-gray-3);
+.toc-area > .container > .toc-items > .toc-item > .toc-indicator {
+    display: inline-block;
+    height: 5px;
     border-radius: 3px;
+    background: var(--oc-gray-5);
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
-.toc-area > .container > .toc-items > .toc-item.toc-h2 {
-    margin-left: 10px;
+.toc-area > .container > .toc-items > .toc-item.highlight > .toc-indicator {
+    background: var(--oc-gray-9);
 }
 
-.toc-area > .container > .toc-items > .toc-item.toc-h3 {
-    margin-left: 25px;
+.toc-area > .container > .toc-items > .toc-item:hover > .toc-indicator {
+    background: var(--oc-teal-5);
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h1 > .toc-indicator {
+    width: 25px;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h2 > .toc-indicator {
+    width: 15px;
+}
+
+.toc-area > .container > .toc-items > .toc-item.toc-h3 > .toc-indicator {
+    width: 10px;
+}
+
+.toc-area > .container > .toc-items > .toc-item > .toc-text {
+    display: inline-block;
+    font-size: 15px;
+}
+
+@media(max-width: 999px) {
+    .toc-area {
+        position: relative;
+        transition: all 0.5s;
+        max-width: 100%;
+        top: 0;
+        transform: none;
+    }
+}
+
+@media(max-width: 1299px) {
+    .toc-area > .container > .toc-items > .toc-item > .toc-text {
+        font-size: 0;
+    }
 }

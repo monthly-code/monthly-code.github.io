@@ -6,7 +6,8 @@
     top: 0;
     height: 70px;
     background: var(--oc-white); /*rgba(255, 255, 255, 0.85);*/
-    opacity: 0.85;
+    opacity: 0.95;
+    z-index: 100;
 }
 
 .header-area > .container {
@@ -78,6 +79,7 @@
 
 .footer-area > .container > .account-area > .account-items {
     list-style-type: none;
+    padding: 0;
 }
 
 .footer-area > .container > .account-area > .account-items > .account-item {

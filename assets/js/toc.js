@@ -77,9 +77,9 @@ setContents = ()=>{
                 continue;
             } else {
                 if(element.className == 'page-title') {
-                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()} toc-title" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)" value="${element.offsetTop}">${element.innerText}</li>`
+                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()} toc-title" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)" value="${element.offsetTop}"><div class="toc-indicator"></div><div class="toc-text">${element.innerText}</div></li>`
                 } else {
-                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()}" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)" value="${element.offsetTop}">${element.innerText}</li>`
+                    tocHTML+=`<li class="toc-item toc-${element.tagName.toLowerCase()}" id="toc-${count++}" onclick="moveScrollContent(${element.offsetTop-90}, 500)" value="${element.offsetTop}"><div class="toc-indicator"></div><div class="toc-text">${element.innerText}</div></li>`
                 }
             }
         }
