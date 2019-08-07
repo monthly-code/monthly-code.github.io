@@ -90,6 +90,8 @@ setContents = ()=>{
 
 highlightContent = ()=>{
     const { contents, contentsOffset } = getContents()
+    if(contents.length == 0) return;
+
     for(content of contents) {
         delClass(content, 'highlight')
     }

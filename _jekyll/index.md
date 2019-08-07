@@ -1,7 +1,5 @@
 ---
 layout: page
-categories: [index, jekyll]
-tags: [jekyll, init.]
 ---
 
-# jekyll
+{%- include collection/main.html label="jekyll" -%}

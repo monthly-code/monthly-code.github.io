@@ -26,21 +26,17 @@
 }
 
 .prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area {
-
+    height: 100%;
 }
 
 .prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container {
     text-align: center;
 }
 
-.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > p > .prevnext-item-collection {
+.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > .prevnext-item-collection {
     font-size: 14px;
     color: var(--oc-gray-6);
-}
-
-.prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > p > .prevnext-item-date {
-    font-size: 14px;
-    color: var(--oc-gray-5);
+    font-style: italic;
 }
 
 .prevnext-area > .container > .prevnext-items > .prevnext-item > .prevnext-item-area > .container > .prevnext-item-category {

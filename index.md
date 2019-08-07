@@ -8,9 +8,6 @@
         {%- include common/data/publications.html label=label -%}
         {%- include common/data/sorted.html data=publications by="date" -%}
         <li class="home-item">
-            {%- comment -%}
-            <h3 class="home-collection-label">{{- label | escape -}}</h3>
-            {%- endcomment -%}
             {%- include common/items.html items=reverse_sorted label=label limit=1 -%}
         </li>
         {%- endfor -%}

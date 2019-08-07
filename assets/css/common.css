@@ -49,11 +49,18 @@ blockquote {
 
 .common-items > .common-item {
     padding: 5% 3%;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid transparent;
+    border-color: var(--oc-gray-4);
 }
 
 .common-items > .common-item:last-child {
     border: none;
+}
+
+.common-items > .common-item:hover {
+    background: var(--oc-gray-1);
+    border: 1px solid transparent;
+    border-color: var(--oc-gray-1);
 }
 
 .common-items > .common-item > p > a > .common-item-collection {

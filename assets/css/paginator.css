@@ -1,0 +1,24 @@
+.paginator-area {
+    display: block;
+    text-align: center;
+}
+
+.paginator-area > .paginator-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.paginator-area > .paginator-items > .paginator-item {
+    display: inline-block;
+    color: var(--oc-gray-9);
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.paginator-area > .paginator-items > .paginator-item:hover {
+    background: var(--oc-gray-1);
+    cursor: pointer;
+}

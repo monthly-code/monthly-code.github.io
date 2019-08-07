@@ -9,30 +9,43 @@
 }
 
 .collection-area > .collection-items > .collection-item {
-
+    
 }
 
 .collection-area > .collection-empty {
-
+    display: block;
+    margin: 0 auto;
+    color: var(--oc-gray-7);
+    text-align: center;
+    font-size: 32px;
 }
 
 /* For Docs Collections */
 .collection-area > .collection-labels {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .collection-area > .collection-labels > .collection-label {
-    margin: 3% 5%;
+    margin: auto 5%;
+    border-bottom: 1px solid transparent;
+    border-color: var(--oc-gray-4);
 }
 
 .collection-area > .collection-labels > .collection-label > .common-items {
     list-style-type: none;
-    padding: 0;    
+    padding: 0;
 }
 
 .collection-area > .collection-labels > .collection-label > .common-items > .common-item {
     padding: 5% 3%;
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid transparent;
+    border-color: var(--oc-gray-4);
 }
 
+.collection-area > .collection-labels > .collection-label > .common-items > .common-item:hover {
+    background: var(--oc-gray-1);
+    border: 1px solid transparent;
+    border-color: var(--oc-gray-1);
+}

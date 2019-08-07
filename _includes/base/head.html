@@ -30,19 +30,10 @@
 <link rel="stylesheet" href="/assets/css/fab.css">
 <link rel="stylesheet" href="/assets/css/search.css">
 <link rel="stylesheet" href="/assets/css/prevnext.css">
+<link rel="stylesheet" href="/assets/css/paginator.css">
 <link rel="stylesheet" href="/assets/css/collection.css">
 {%- comment -%}
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/css/header.css">
-<link rel="stylesheet" href="/assets/css/footer.css">
-<link rel="stylesheet" href="/assets/css/nav.css">
-<link rel="stylesheet" href="/assets/css/home.css">
-<link rel="stylesheet" href="/assets/css/page.css">
-<link rel="stylesheet" href="/assets/css/paginator.css">
-<link rel="stylesheet" href="/assets/css/prevnext.css">
-<link rel="stylesheet" href="/assets/css/collection.css">
 <link rel="stylesheet" href="/assets/css/disqus.css">
-<link rel="stylesheet" href="/assets/css/toc.css">
 {%- endcomment -%}
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -51,4 +42,7 @@
 <script defer src="/assets/js/fab.js"></script>
 {%- if site.search -%}
     <script defer src="/assets/js/search.js"></script>
+{%- endif -%}
+{%- if site.paginator.size -%}
+    <script defer src="/assets/js/paginator.js"></script>
 {%- endif -%}

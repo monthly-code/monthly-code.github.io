@@ -1,12 +1,7 @@
 {%- if include.item -%}
     <div class="prevnext-item-area">
         <div class="container">
-            <p><em class="prevnext-item-collection">{{- include.item.collection -}}</em> | <em clsas="prevnext-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
-            {%- comment -%}
-            {%- for category in include.item.categories -%}
-                <span class="prevnext-item-category">{{- category -}}</span>
-            {%- endfor -%}
-            {%- endcomment -%}
+            <p class="prevnext-item-collection">{{- include.item.collection -}}</p>
             <a href="{{- include.item.url | relative_url -}}">
                 <p class="prevnext-item-title">{{- include.item.title | strip_html -}}</p>
             </a>

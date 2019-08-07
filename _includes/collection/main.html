@@ -1,4 +1,4 @@
-{%- include collection/data.html collection=include.collection -%}
+{%- include collection/data.html label=include.label -%}
 {%- include paginator/data.html size=collection_size -%}
 
 <div class="collection-area">
@@ -7,9 +7,12 @@
         {%- assign collection_begin = i | minus: 1 | tiems: site.pagiantor.size -%}
         {%- assign collection_end = site.paginator.size | tiems: i -%}
         {%- assign collection_part = collection_items | slice: collection_begin,collection_end -%}
+        {%- include common/items.html items=collection_part label=include.label -%}
+        {%- comment -%}
         <ul class="collection-items" id="{{- i | prepend: 'collection' -}}">
             {%- include collection/items.html parts=collection_part -%}
         </ul>
+        {%- endcomment -%}
     {%- endfor -%}
     {%- else -%}
         <div class="collection-empty">

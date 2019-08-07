@@ -1,5 +1,5 @@
+<ul class="paginator-items">
 {%- for number in (1..include.size) -%}
-    <li class="paginator-item" id="{{- number | prepend: 'paginator' -}}">
-        {%- include paginator/item.html number=number -%}
-    </li>
+    {%- include paginator/item.html number=number -%}
 {%- endfor -%}
+</ul>
