@@ -2,10 +2,10 @@
 layout: default
 ---
 
-{%- include addon/toc.html -%}
-
 <section class="content-area">
     <div class="container">
+        {%- include common/front-matter.html -%}
+        {%- include addon/toc.html -%}
         {{- content -}}
     </div>
 </section>

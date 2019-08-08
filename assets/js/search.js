@@ -69,21 +69,21 @@ searchingLibrary = ()=>{
 
                 if(!isResult) isResult = true
 
-                searchHTML += 
+                searchHTML+= 
                 `
                 <li class="search-item">
-                    <a href="${searchedItem["url"]}">
-                        <p class="item-categories">`
-                        if(searchedItem["categories"].trim().length > 0) {
-                            for(var category of searchedItem["categories"].split(',')) {
-                                searchHTML+=`<span class="item-category">${category}</span>`
-                            }
-                        }
-                        searchHTML+=`
-                        </p>
-                        <p class="item-title">${searchedItem["title"]}</p>
-                        <p class="item-excerpt">${searchedItem["excerpt"]}</p>`+
-                        // <p class="item-content">${result_datum["contents"].substring(0, 25)+"..."}</p>
+                    <a href="${searchedItem["url"]}">`
+                    // if(searchedItem["categories"].trim().length > 0) {
+                    //     searchHTML+=`<p class="item-categories">`
+                    //         for(var category of searchedItem["categories"].split(',')) {
+                    //             searchHTML+=`<span class="item-category">${category}</span>`
+                    //         }
+                    //     searchHTML+=`</p>`
+                    // }
+                    searchHTML+=`
+                    <p class="item-title">${searchedItem["title"]}</p>
+                    <p class="item-excerpt">${searchedItem["excerpt"]}</p>`+
+                    // <p class="item-content">${result_datum["contents"].substring(0, 25)+"..."}</p>
                     `</a>
                 </li>
                 `

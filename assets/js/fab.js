@@ -1,4 +1,4 @@
-moveScroll = (destination, duration)=>{
+moveScrollTop = (destination, duration)=>{
     const height = window.scrollY,
           step = Math.PI / (duration / 15),
           cosParam = height / 2
@@ -34,4 +34,4 @@ window.addEventListener('scroll', ()=>{
     }
 })
 
-document.getElementById('fabTop').addEventListener('click', moveScroll.bind(null, 0, 500))
+document.getElementById('fabTop').addEventListener('click', moveScrollTop.bind(null, 0, 500))

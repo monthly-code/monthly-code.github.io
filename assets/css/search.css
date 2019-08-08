@@ -53,12 +53,13 @@
 
 .search-result-area > .container > .result-area > .search-items {
     list-style-type: none;
+    padding: 0 40px;
 }
 
 .search-result-area > .container > .result-area > .search-items > .search-item {
     padding: 5% 3%;
     border-bottom: 1px solid transparent;
-    border-color: var(--oc-gray-5);
+    border-color: var(--oc-gray-4);
 }
 
 .search-result-area > .container > .result-area > .search-items > .search-item:last-child {
@@ -67,6 +68,10 @@
 
 .search-result-area > .container > .result-area > .search-items > .search-item > a > p {
     color: var(--oc-gray-7);
+}
+
+.search-result-area > .container > .result-area > .search-items > .search-item:hover > a > p {
+    color: var(--oc-teal-5);
 }
 
 .search-result-area > .container > .search-empty-area {
@@ -87,7 +92,8 @@
 }
 
 .search-result-area > .search-extend-area {
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
     position: fixed;
     width: 24px;
     height: 24px;
@@ -114,7 +120,8 @@
 }
 
 .search-result-area > .search-close-area {
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
     position: fixed;
     width: 24px;
     height: 24px;

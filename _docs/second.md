@@ -9,6 +9,6 @@ docs second excerpt
 
 ---
 
-# second
+## second
 
 docs second content

@@ -79,7 +79,7 @@
     }
 }
 
-@media(max-width: 1299px) {
+@media(min-width: 1000px) and (max-width: 1299px) {
     .toc-area > .container > .toc-items > .toc-item > .toc-text {
         font-size: 0;
     }
