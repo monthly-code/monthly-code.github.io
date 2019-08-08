@@ -21,8 +21,7 @@ img {
 a {
     text-decoration: none;
     font-size: 14px;
-    text-transform: uppercase;
-    color: var(--oc-gray-5);
+    color: var(--oc-gray-7);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -82,4 +81,13 @@ blockquote {
 .common-items > .common-item > .common-item-excerpt {
     font-size: 18px;
     color: var(--oc-gray-5);
+}
+
+.oss-item {
+    /* display: inline-block; */
+    margin: 1%;
+    color: var(--oc-gray-9);
+    border-bottom: 1px solid transparent;
+    border-color: var(--oc-gray-1);
+    border-radius: 3px;
 }

@@ -10,6 +10,7 @@ google-analytics:
 disqus:
   username: monthly-code
 
+username: Monthly Code
 # Site Path Setting
 host:
 port:
@@ -20,7 +21,7 @@ baseurl:
 search: true
 
 # Site Info Setting
-title: monthly code's site
+title: monthly code's _Template site
 intro: >
   Intro message!
 

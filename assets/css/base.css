@@ -32,11 +32,11 @@
     text-align: center;
     line-height: 70px;
     text-transform: lowercase;
-    color: var(--oc-gray-5);
+    color: var(--oc-gray-9);
 }
 
 .header-area > .container > .header-logo-area > .header-logo:hover {
-    color: var(--oc-gray-9);
+    color: var(--oc-teal-5);
 }
 
 .header-area > .container > .header-nav-area {
@@ -93,6 +93,10 @@
 
 .footer-area > .container > .account-area > .account-items > .account-item > a > i {
     color: var(--oc-gray-7);
+}
+
+.footer-area > .container > .account-area > .account-items > .account-item:hover > a > i {
+    color: var(--oc-teal-5);
 }
 
 .footer-area > .container > .copyright-area {
