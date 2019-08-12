@@ -1,0 +1,23 @@
+.front-matter-area {
+
+}
+
+.front-matter-area > .container {
+    text-align: center;
+}
+
+.front-matter-area > .container > .front-label {
+    color: var(--oc-gray-3);
+}
+
+.front-matter-area > .container > .front-title {
+    color: var(--oc-gray-9);
+}
+
+.front-matter-area > .container > .front-date {
+    color: var(--oc-gray-5);
+}
+
+.front-matter-area > .container > .front-reading-time {
+    color: var(--oc-gray-5);
+}
