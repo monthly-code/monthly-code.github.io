@@ -6,8 +6,8 @@
 
 .home-area > .home-items {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .home-area > .home-items > .home-item {

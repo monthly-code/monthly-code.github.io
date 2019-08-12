@@ -3,21 +3,46 @@
 }
 
 .front-matter-area > .container {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .front-matter-area > .container > .front-label {
     color: var(--oc-gray-3);
 }
 
+.front-matter-area > .container > .front-label::before {
+    content: "\f187";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* 400 */
+    margin-right: 10px;
+}
+
 .front-matter-area > .container > .front-title {
     color: var(--oc-gray-9);
+    font-size: 50px;
+    margin: 15px 0 10px 0;
 }
 
 .front-matter-area > .container > .front-date {
     color: var(--oc-gray-5);
+    font-size: 14px;
+}
+
+.front-matter-area > .container > .front-date::before {
+    content: "\f133";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* 400 */
+    margin-right: 10px;
 }
 
 .front-matter-area > .container > .front-reading-time {
     color: var(--oc-gray-5);
+    font-size: 14px;
+}
+
+.front-matter-area > .container > .front-reading-time::before {
+    content: "\f017";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* 400 */
+    margin-right: 10px;
 }

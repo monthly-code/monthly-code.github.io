@@ -77,10 +77,12 @@
 
 .footer-area > .container > .account-area {
     display: inline-block;
+    vertical-align: middle;
 }
 
 .footer-area > .container > .account-area > .account-items {
     list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -103,6 +105,10 @@
 
 .footer-area > .container > .copyright-area {
     display: inline-block;
+    vertical-align: middle;
+}
+.footer-area > .container > .copyright-area > p {
+    margin: 0;
     color: var(--oc-gray-7);
     font-size: 16px;
 }

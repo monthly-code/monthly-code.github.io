@@ -122,9 +122,9 @@
 
 .fab-area > .container > .fab-items > .fab-item > a > i {
     position: relative;
-    top: 50%;
+    top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
     color: var(--oc-gray-7);
     font-size: 18px;
 }

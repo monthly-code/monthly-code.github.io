@@ -1,6 +1,6 @@
 <li class="common-item">
         {%- include common/data/index-link.html label=include.label -%}
-    <p><a href="{{- index_link -}}"><em class="common-item-collection">{{- include.label | escape -}}</em></a> | <em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
+    <p><a href="{{- index_link -}}"><em class="common-item-collection">{{- include.label | escape -}}</em></a>|<em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
     <a href="{{- include.item.url | relative_url -}}"><p class="common-item-title">{{- include.item.title | strip_html -}}</p></a>
     <p class="common-item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
 </li>
