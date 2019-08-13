@@ -3,6 +3,14 @@
     border-color: var(--oc-gray-3);
 }
 
+.footnote:hover {
+    color: var(--oc-teal-5);
+}
+
+.reversefootnote:hover {
+    color: var(--oc-teal-5);
+}
+
 /* .footnotes::before {
     position: absolute;
     content: "각주";

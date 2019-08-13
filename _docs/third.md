@@ -26,7 +26,7 @@ docs third content
 
 code area 는 다음과 같습니다.
 
-```c++
+```cpp
 class Hello {
 public:
     Hello();
@@ -56,7 +56,6 @@ list는 다음과 같습니다.
 인용구는 다음과 같습니다.
 > 인용
 >> 내부 인용
-
 
 [^1]: 미주로 글 하단에 달리게 된다.
 [^2]: 위와 똑같이 하단에 달린다.

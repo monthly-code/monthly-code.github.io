@@ -23,6 +23,10 @@
     margin: 15px 0 10px 0;
 }
 
+/* .front-matter-area > .container > .front-title::after {
+    display: none;
+} */
+
 .front-matter-area > .container > .front-date {
     color: var(--oc-gray-5);
     font-size: 14px;

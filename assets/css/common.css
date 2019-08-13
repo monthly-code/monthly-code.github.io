@@ -29,6 +29,19 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--oc-gray-9);
 }
 
+/* h1::after, h2::after, h3::after {
+    display: inline-block;
+    content: "\f0c1";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 10px;
+    color: var(--oc-gray-3);
+}
+
+h1:hover::after, h2:hover::after, h3:hover::after {
+    color: var(--oc-teal-3);
+} */
+
 p {
     margin: 5px auto;
     line-height: 180%;
@@ -47,14 +60,17 @@ blockquote::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900; /* 400 */
     margin-right: 10px;
+    font-size: 20px;
 }
 
-blockquote::after {
+/* blockquote::after {
     content: "\f10e";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* 400 */
+    font-weight: 900; /* 400 *//*
     margin-right: 10px;
-}
+    width: 100%;
+    text-align: right;
+} */
 
 blockquote > blockquote::before {
     content: "";
@@ -63,6 +79,20 @@ blockquote > blockquote::before {
 blockquote > blockquote::after {
     content: "";
 }
+
+code {
+    color: var(--oc-teal-5);
+}
+
+/* ::-moz-selection { /* Code for Firefox */
+    /* color: var(--oc-teal-5); */
+    /* background: var(--oc-gray-1); */
+/* } */
+
+/* ::selection { */
+    /* color: var(--oc-teal-5); */
+    /* background: var(--oc-gray-1); */
+/* } */
 
 .common-items {
     list-style-type: none;
