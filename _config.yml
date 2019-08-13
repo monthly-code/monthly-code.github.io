@@ -69,10 +69,11 @@ defaults:
 # Markdown Setting
 markdown: kramdown
 kramdown:
-  highlighter: rouge
-  # syntax_highlighter_opts:
-  #   block:
-  #     line_numbers: true
+  syntax_highlighter_opts:
+    disable: true
+    # block:
+    #   line_numbers: true
+  # highlighter: rouge
   # input: GFM
 
 # Build Setting

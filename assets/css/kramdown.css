@@ -1,3 +1,18 @@
+.footnotes {
+    border-top: 1px solid transparent;
+    border-color: var(--oc-gray-3);
+}
+
+/* .footnotes::before {
+    position: absolute;
+    content: "각주";
+    color: var(--oc-gray-3);
+    background: var(--oc-gray-8);
+    padding: 2px;
+    font-size: 8px;
+    text-align: right;
+} */
+
 /* pre {
     font-size: 15px;
     border-radius: 3px;

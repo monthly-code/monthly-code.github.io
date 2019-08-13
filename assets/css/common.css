@@ -35,10 +35,33 @@ p {
 }
 
 blockquote {
-    border-left: 4px solid #aaa;
+    border-left: 4px solid transparent;
+    border-color: var(--oc-gray-3);
     color: #828282;
     margin: 15px auto;
     padding-left: 15px;
+}
+
+blockquote::before {
+    content: "\f10d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* 400 */
+    margin-right: 10px;
+}
+
+blockquote::after {
+    content: "\f10e";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* 400 */
+    margin-right: 10px;
+}
+
+blockquote > blockquote::before {
+    content: "";
+}
+
+blockquote > blockquote::after {
+    content: "";
 }
 
 .common-items {
