@@ -1,0 +1,25 @@
+.tag-cloud-area {
+
+}
+
+.tag-cloud-area > .conatiner {
+
+}
+
+.tag-cloud-area > .container > .tag-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tag-cloud-area > .container > .tag-items > .tag-item {
+    display: inline-block;
+    background: var(--oc-gray-1);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 3px 2px;
+}
+
+.tag-cloud-area > .container > .tag-items > .tag-item::before {
+    content: "#";
+}

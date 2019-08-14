@@ -2,5 +2,5 @@
 
 {% for label in published_labels %}
     {%- include common/data/publications.html label=label -%}
-    {%- include tag/items.html items_name="tag-items" item_name="tag-item" items=publications label=label page_title=include.title -%}
+    {%- include tag/items.html items_name="common-items" item_name="common-item" items=publications label=label page_title=include.title -%}
 {% endfor %}

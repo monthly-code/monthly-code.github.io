@@ -1,0 +1,25 @@
+.category-cloud-area {
+
+}
+
+.category-cloud-area > .conatiner {
+
+}
+
+.category-cloud-area > .container > .category-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-cloud-area > .container > .category-items > .category-item {
+    display: inline-block;
+    background: var(--oc-gray-1);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 3px 2px;
+}
+
+.category-cloud-area > .container > .category-items > .category-item::before {
+    content: "#";
+}
