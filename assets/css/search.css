@@ -1,5 +1,5 @@
 .search-result-area {
-    z-index: 11;
+    z-index: 100;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -26,7 +26,7 @@
     left: 0;
     right: 0;
     font-size: 0px;
-    margin-top: 80px;
+    /* margin-top: 80px; */
 }
 
 .search-result-area > .container > .result-area {
@@ -37,6 +37,7 @@
     font-size: 16px;
     background: var(--oc-gray-3);
     transition: all .3s ease-in-out;
+    padding-top: 3%;
 }
 
 .search-result-area.show.extend > .container > .result-area {

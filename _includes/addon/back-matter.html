@@ -1,0 +1,33 @@
+<div class="back-matter-area">
+    <div class="container">
+        <div class="tag-area">
+            {%- assign registered_tags = site.tags | where_exp: 'item', 'item.title!="Index"' -%}
+            <ul class="tag-items">
+            {% for tag in page.tags %}
+                {%- assign is_find = false -%}
+                {% for registered_tag in registered_tags %}
+                    {%- if registered_tag.title != tag -%}
+                        {%- continue -%}
+                    {%- endif -%}
+                    {%- assign is_find = true -%}
+                    {%- assign link = registered_tag.url -%}
+                    {%- break -%}
+                {% endfor %}
+                {%- if is_find -%}
+                <li class="tag-item"><a href="{{- link -}}">{{- tag -}}</a></li>
+                {%- else -%}
+                <li class="tag-item">{{- tag -}}</li>
+                {%- endif -%}
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="ccl-area">
+            <ul class="ccl-items">
+                <li class="ccl-item"><i class="fab fa-creative-commons"></i></li>
+                <li class="ccl-item"><i class="fab fa-creative-commons-by"></i></li>
+                <li class="ccl-item"><i class="fab fa-creative-commons-nc"></i></li>
+                <li class="ccl-item"><i class="fab fa-creative-commons-nd"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>

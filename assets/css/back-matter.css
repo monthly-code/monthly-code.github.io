@@ -1,0 +1,50 @@
+.back-matter-area {
+    margin: 3% auto;
+}
+
+.back-matter-area > .container {
+    
+}
+
+.back-matter-area > .container > .tag-area {
+
+}
+
+.back-matter-area > .container > .tag-area > .tag-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.back-matter-area > .container > .tag-area > .tag-items > .tag-item {
+    display: inline-block;
+    background: var(--oc-gray-1);
+    padding: 7px;
+    border-radius: 3px;
+    margin: 3px 1px;
+    font-size: 12px;
+}
+
+.back-matter-area > .container > .tag-area > .tag-items > .tag-item:hover {
+    background: var(--oc-teal-3);
+    opacity: 0.8;
+    transition: all ease-in .5s;
+}
+
+.back-matter-area > .container > .tag-area > .tag-items > .tag-item::before {
+    content: "#";
+}
+
+.back-matter-area > .container > .ccl-area {
+    text-align: right;
+}
+
+.back-matter-area > .container > .ccl-area > .ccl-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.back-matter-area > .container > .ccl-area > .ccl-items > .ccl-item {
+    display: inline-block;
+}
