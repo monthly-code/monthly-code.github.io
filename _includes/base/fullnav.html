@@ -1,0 +1,25 @@
+<div class="full-nav-area hide" id="fullNav">
+    <div class="container">
+        <div class="nav-close-area">
+            <p class="nav-close" id="navClose">
+                <a role="button">
+                    <i class="fas fa-times"></i>
+                </a>
+            </p>
+        </div>
+        <ul class="nav-items">
+            {%- for page in site.pages -%}
+                {%- if page.title -%}
+                <li class="nav-item"><a href="{{- page.url -}}">{{- page.title -}}</a></li>
+                {%- endif -%}
+            {%- endfor -%}
+        </ul>
+        <ul class="nav-items">
+        {%- include common/data/labels.html -%}
+        {%- for label in published_labels -%}
+            {%- include common/data/index-link.html label=label -%}
+            <li class="nav-item"><a href="{{- index_link -}}">{{- label -}}</a></li>
+        {%- endfor -%}
+        </ul>
+    </div>
+</div>

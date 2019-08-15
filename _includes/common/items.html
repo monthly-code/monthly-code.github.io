@@ -5,11 +5,3 @@
         {%- include common/item.html item=item label=include.label -%}
     {%- endfor -%}
 </ul>
-
-{%- comment -%}
-<ul class="{{- include.items_name -}}">
-    {%- for item in include.items -%}
-        {%- include common/item.html item_name=include.item_name item=item label=include.label -%}
-    {%- endfor -%}
-</ul>
-{%- endcomment -%}

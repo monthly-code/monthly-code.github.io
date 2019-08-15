@@ -1,20 +1,24 @@
+movePaginator = (pageIdx)=>{
+    let pageId = 0;
+}
+
 paginator = (page_idx)=>{
     var id = 'paginator'+page_idx;
-    // console.log(id);
     
     var cur_paginator = document.getElementById(id);
     if(!cur_paginator) return;
 
     var paginators = document.getElementsByClassName('paginator-item');
     for(let i=0; i < paginators.length; i++) {
-        removeClass(paginators[i], 'active');
+        delClass(paginators[i], 'active');
     }
     addClass(cur_paginator, 'active');
     
-    var collections = document.getElementsByClassName('collection-list');
+    var collections = document.getElementsByClassName('collection-items');
+    console.log(`collection size : ${collections.length}`)
     for(let i=0; i< collections.length; i++) {
-        removeClass(collections[i], 'show');
-        if(collections[i].id.indexOf('page'+page_idx) > -1)
+        delClass(collections[i], 'show');
+        if(collections[i].id.indexOf('collection'+page_idx) > -1)
             addClass(collections[i], 'show');
     }
 }

@@ -1,31 +1,6 @@
 <li class="common-item">
-        {%- include common/data/index-link.html label=include.label -%}
-    <p><a href="{{- index_link -}}"><em class="common-item-collection">{{- include.label | escape -}}</em></a>|<em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
+    {%- include common/data/index-link.html label=include.label -%}
+    <p><a href="{{- index_link -}}"><em class="common-item-collection">{{- include.label | escape -}}</em></a>|<em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" | default: "whenever" -}}</em></p>
     <a href="{{- include.item.url | relative_url -}}"><p class="common-item-title">{{- include.item.title | strip_html -}}</p></a>
     <p class="common-item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
 </li>
-
-{%- comment -%}
-<li class="{{- include.item_name -}}">
-    <p><em class="common-item-collection">{{- include.label | escape -}}</em> | <em class="common-item-date">{{- include.item.date | date: "%B %d, %Y" -}}</em></p>
-
-    {%- comment -%}
-    <p>
-    {%- for category in include.item.categories -%}
-        <a href="/categories/{{- category -}}">{{- category | escape -}}</a>
-    {%- endfor -%}
-    </p>
-    {%- endcomment -%}
-    
-    <a href="{{- include.item.url | relative_url -}}"><p class="common-item-title">{{- include.item.title | strip_html -}}</p></a>
-    <p class="common-item-excerpt">{{- include.item.excerpt | strip_html -}}</p>
-
-    {%- comment -%}
-    <p>
-        {%- for tag in include.item.tags -%}
-            <a href="/tags/{{- tag -}}">{{- tag | escape -}}</a>
-        {%- endfor -%}
-    </p>
-    {%- endcomment -%}
-</li>
-{%- endcomment -%}

@@ -1,14 +1,23 @@
 ---
+title: about
 permalink: about
 ---
 
 # About
+
+`Powered by Jekyll` & `Designed by monthly-code`
 
 Jekyll 기반으로 만들어진 _Template 입니다.
 
 추가된 gem은 github-pages 뿐이고 나머지는 모두 직접 개발한 것입니다.
 
 [debug](/debug)를 통해 여러분은 **로컬** 상에서 기본적인 site의 정보와 현재 생성되어 있는 collection, categories, tags 등등에 대해 알 수 있습니다.
+
+
+[Creative Commons License](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en) 이 doc & journal에 걸려있습니다.
+
+작성한 글은 국제 라이센스에 따라 이용할 수 있습니다.
+
 
 
 <br>

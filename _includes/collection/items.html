@@ -1,0 +1,5 @@
+<ul class="collection-items common-items" id="{{- i | prepend: 'collection' -}}">
+    {%- for item in include.items -%}
+        {%- include common/item.html item=item label=include.label -%}
+    {%- endfor -%}
+</ul>

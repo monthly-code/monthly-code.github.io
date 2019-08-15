@@ -4,15 +4,10 @@
 <div class="collection-area">
     {%- if collection_size > 0 -%}
     {%- for i in (1..paginator_size) -%}
-        {%- assign collection_begin = i | minus: 1 | tiems: site.pagiantor.size -%}
-        {%- assign collection_end = site.paginator.size | tiems: i -%}
+        {%- assign collection_begin = i | minus: 1 | times: site.paginator.size -%}
+        {%- assign collection_end = site.paginator.size | times: i -%}
         {%- assign collection_part = collection_items | slice: collection_begin,collection_end -%}
-        {%- include common/items.html items=collection_part label=include.label -%}
-        {%- comment -%}
-        <ul class="collection-items" id="{{- i | prepend: 'collection' -}}">
-            {%- include collection/items.html parts=collection_part -%}
-        </ul>
-        {%- endcomment -%}
+        {%- include collection/items.html items=collection_part label=include.label -%}
     {%- endfor -%}
     {%- else -%}
         <div class="collection-empty">

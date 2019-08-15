@@ -7,15 +7,15 @@
 }
 
 .front-matter-area > .container > .front-label {
-    color: var(--oc-gray-3);
+    color: var(--oc-gray-5);
 }
 
-.front-matter-area > .container > .front-label::before {
+/* .front-matter-area > .container > .front-label::before {
     content: "\f187";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* 400 */
+    font-weight: 900; /* 400 *//*
     margin-right: 10px;
-}
+} */
 
 .front-matter-area > .container > .front-title {
     color: var(--oc-gray-9);
@@ -30,23 +30,25 @@
 .front-matter-area > .container > .front-date {
     color: var(--oc-gray-5);
     font-size: 14px;
+    margin-right: 5px;
 }
 
-.front-matter-area > .container > .front-date::before {
+/* .front-matter-area > .container > .front-date::before {
     content: "\f133";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* 400 */
+    font-weight: 900; /* 400 *//*
     margin-right: 10px;
-}
+} */
 
 .front-matter-area > .container > .front-reading-time {
     color: var(--oc-gray-5);
     font-size: 14px;
+    margin-left: 5px;
 }
 
-.front-matter-area > .container > .front-reading-time::before {
+/* .front-matter-area > .container > .front-reading-time::before {
     content: "\f017";
     font-family: "Font Awesome 5 Free";
-    font-weight: 900; /* 400 */
+    font-weight: 900; /* 400 *//*
     margin-right: 10px;
-}
+} */

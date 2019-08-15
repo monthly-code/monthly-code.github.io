@@ -2,7 +2,13 @@
     <div class="container">
         <p class="front-label">{{- page.collection -}}</p>
         <h1 class="front-title">{{- page.title -}}</h1>
-        <p class="front-date">{{- page.date | date: "%B %d, %Y" -}}</p>
-        <p class="front-reading-time">{{- page.reading_time | default: " - " -}}</p>
+        {%- assign avg = 150 -%}
+        {%- assign words = page.content | number_of_words -%}
+        {%- if words < avg -%}
+            {%- assign reading_time = "1 min" -%}
+        {%- else -%}
+            {%- assign reading_time = words | divided_by: avg | append: " mins" -%}
+        {%- endif -%}
+        <span class="front-date">{{- page.date | date: "%B %d, %Y" | default: "whenever" -}}</span>·<span class="front-reading-time">{{- reading_time -}}</span>
     </div>
 </div>

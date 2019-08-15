@@ -27,14 +27,15 @@
 
 .header-area > .container > .header-logo-area {
     display: inline-block;
-    
 }
 
 .header-area > .container > .header-logo-area > .header-logo {
     text-align: center;
+    vertical-align: middle;
     line-height: 70px;
     text-transform: lowercase;
     color: var(--oc-gray-9);
+    font-size: 16px;
 }
 
 .header-area > .container > .header-logo-area > .header-logo:hover {
@@ -42,7 +43,24 @@
 }
 
 .header-area > .container > .header-nav-area {
+    float: right;
+    z-index: 200;
+}
 
+.header-area > .container > .header-nav-area > .header-nav {
+    margin: 0;
+    cursor: pointer;
+}
+
+.header-area > .container > .header-nav-area > .header-nav > a > i {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    font-size: 16px;
+}
+
+.header-area > .container > .header-nav-area > .header-nav:hover > a > i {
+    color: var(--oc-teal-5);
 }
 
 .main-area {
@@ -89,6 +107,9 @@
 .footer-area > .container > .account-area > .account-items > .account-item {
     display: inline-block;
     margin: 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
 .footer-area > .container > .account-area > .account-items > .account-item > a {
@@ -97,6 +118,7 @@
 
 .footer-area > .container > .account-area > .account-items > .account-item > a > i {
     color: var(--oc-gray-7);
+    font-size: 15px;
 }
 
 .footer-area > .container > .account-area > .account-items > .account-item:hover > a > i {
@@ -104,11 +126,11 @@
 }
 
 .footer-area > .container > .copyright-area {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: middle;
 }
 .footer-area > .container > .copyright-area > p {
     margin: 0;
     color: var(--oc-gray-7);
-    font-size: 16px;
+    font-size: 14px;
 }

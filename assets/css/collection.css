@@ -6,10 +6,11 @@
 
 .collection-area > .collection-items {
     list-style-type: none;
+    display: none;
 }
 
-.collection-area > .collection-items > .collection-item {
-    
+.collection-area > .collection-items.show {
+    display: block;
 }
 
 .collection-area > .collection-empty {

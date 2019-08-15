@@ -21,8 +21,10 @@
     background: var(--oc-gray-1);
     border-radius: 3px;
     font-size: 12px;
+    font-weight: 900;
     padding: 7px;
     margin: 3px 1px;
+    color: var(--oc-gray-7);
 }
 
 .back-matter-area > .container > .tag-area > .tag-items > .tag-item:hover {
@@ -32,11 +34,20 @@
 }
 
 .back-matter-area > .container > .tag-area > .tag-items > .tag-item::before {
-    content: "#";
+    content: "\f292";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.back-matter-area > .container > .tag-area > .tag-items > .tag-item > a {
+    font-size: 12px;
+    color: var(--oc-gray-7);
 }
 
 .back-matter-area > .container > .ccl-area {
     text-align: right;
+    margin: 10px auto;
 }
 
 .back-matter-area > .container > .ccl-area > .ccl-items {
@@ -47,4 +58,8 @@
 
 .back-matter-area > .container > .ccl-area > .ccl-items > .ccl-item {
     display: inline-block;
+}
+
+.back-matter-area > .container > .ccl-area > .ccl-items > .ccl-item:hover {
+    color: var(--oc-teal-3);
 }
