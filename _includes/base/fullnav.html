@@ -7,19 +7,21 @@
                 </a>
             </p>
         </div>
-        <ul class="nav-items">
-            {%- for page in site.pages -%}
-                {%- if page.title -%}
-                <li class="nav-item"><a href="{{- page.url -}}">{{- page.title -}}</a></li>
-                {%- endif -%}
+        <div class="nav-list-area">
+            <ul class="nav-items nav-site">
+                {%- for page in site.pages -%}
+                    {%- if page.title -%}
+                    <li class="nav-item"><a href="{{- page.url -}}">{{- page.title -}}</a></li>
+                    {%- endif -%}
+                {%- endfor -%}
+            </ul>
+            <ul class="nav-items nav-content">
+            {%- include common/data/labels.html -%}
+            {%- for label in labels -%}
+                {%- include common/data/index-link.html label=label -%}
+                <li class="nav-item"><a href="{{- index_link -}}">{{- label -}}</a></li>
             {%- endfor -%}
-        </ul>
-        <ul class="nav-items">
-        {%- include common/data/labels.html -%}
-        {%- for label in labels -%}
-            {%- include common/data/index-link.html label=label -%}
-            <li class="nav-item"><a href="{{- index_link -}}">{{- label -}}</a></li>
-        {%- endfor -%}
-        </ul>
+            </ul>
+        </div>
     </div>
 </div>

@@ -1,10 +1,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Comaptible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
 
 <title>{%- if page.title -%}{{- page.title | escape -}}{%- else -%}{{- site.title | escape -}}{%- endif -%}</title>
 
 <!-- search -->
+<!-- <meta name="keywords" content=""> --> <!-- almost deprecated -->
+<meta name="author" content="{%- if site.author -%}{{- site.author -}}{%- endif -%}">
 {%- if page.subtitle -%} <meta name="description" content="{{- page.subtitle -}}"> {%- endif -%}
 <link rel="canonical" href="{{- page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url -}}">
 
@@ -47,8 +50,7 @@
 
 <script src="/assets/js/prism.js"></script>
 
-
-<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
 <script src="/assets/js/common.js"></script>
 <script defer src="/assets/js/nav.js"></script>
 <script defer src="/assets/js/toc.js"></script>

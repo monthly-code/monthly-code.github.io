@@ -48,7 +48,7 @@ searchingLibrary = ()=>{
 
                 if(key == 'collection' || key == 'url') continue
                 for(var keyword of keywords) {
-                    console.log(`keyword: ${keyword}`)
+                    // console.log(`keyword: ${keyword}`)
                     if(item[key].indexOf(keyword) != -1) {
                         isFind = true
                         break
@@ -144,6 +144,8 @@ document.getElementById('fabSearch').addEventListener('click', ()=>{
         if(!searchBar.classList.contains('show')) {
             delClass(searchBar, 'hide')
             addClass(searchBar, 'show')
+
+            searchBar.focus()
         }else {
             delClass(searchBar, 'show')
             addClass(searchBar, 'hide')
@@ -153,7 +155,7 @@ document.getElementById('fabSearch').addEventListener('click', ()=>{
             delClass(searchBar, 'hide')
             addClass(searchBar, 'show')
             
-            searchBar.autofocus = true
+            searchBar.focus()
         }
         else searchingLibrary()
     }

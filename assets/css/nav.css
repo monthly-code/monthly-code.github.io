@@ -29,7 +29,6 @@
     position: absolute;
     right: calc(8%);
     top: 20px;
-
 }
 
 .full-nav-area > .container > .nav-close-area > .nav-close {
@@ -45,7 +44,14 @@
     font-size: 18px;
 }
 
-.full-nav-area > .container > .nav-items {
+.full-nav-area > .container > .nav-list-area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.full-nav-area > .container > .nav-list-area > .nav-items {
     /* display: inline-block;
     vertical-align: top; */
     list-style-type: none;
@@ -54,17 +60,29 @@
     text-align: center;
 }
 
-.full-nav-area > .container > .nav-items > .nav-item {
+.full-nav-area > .container > .nav-list-area > .nav-items > .nav-item {
     margin: 3% auto;
     padding: 5px;
     cursor: pointer;
     border-radius: 3px;
 }
 
-.full-nav-area > .container > .nav-items > .nav-item > a {
+.full-nav-area > .container > .nav-list-area > .nav-items > .nav-item > a {
     font-size: 18px;
 }
 
-.full-nav-area > .container > .nav-items > .nav-item:hover > a {
+.full-nav-area > .container > .nav-list-area > .nav-items > .nav-item:hover > a {
     color: var(--oc-teal-5);
+}
+
+.full-nav-area > .container > .nav-list-area > .nav-items.nav-site::before {
+    content: "";
+    font-size: 30px;
+    color: var(--oc-gray-3);
+}
+
+.full-nav-area > .container > .nav-list-area > .nav-items.nav-content::before {
+    content: "";
+    font-size: 30px;
+    color: var(--oc-gray-3);
 }
