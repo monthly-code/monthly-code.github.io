@@ -18,6 +18,8 @@ searchingLibrary = ()=>{
         return
     }
 
+    var keywords = query.split(' ')
+    console.log(keywords)
     //- searching area
     var searchArea = document.getElementById('searchedItems')
     while(searchArea.hasChildNodes()) {
@@ -45,10 +47,18 @@ searchingLibrary = ()=>{
                 }
 
                 if(key == 'collection' || key == 'url') continue
-                if(item[key].indexOf(query) != -1) {
-                    isFind = true
-                    break
+                for(var keyword of keywords) {
+                    console.log(`keyword: ${keyword}`)
+                    if(item[key].indexOf(keyword) != -1) {
+                        isFind = true
+                        break
+                    }
                 }
+                if(isFind) break
+                // if(item[key].indexOf(query) != -1) {
+                //     isFind = true
+                //     break
+                // }
             }
             if(!isFind) continue
             searchedItems.push(item)
