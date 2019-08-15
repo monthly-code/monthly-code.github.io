@@ -16,7 +16,7 @@
         </ul>
         <ul class="nav-items">
         {%- include common/data/labels.html -%}
-        {%- for label in published_labels -%}
+        {%- for label in labels -%}
             {%- include common/data/index-link.html label=label -%}
             <li class="nav-item"><a href="{{- index_link -}}">{{- label -}}</a></li>
         {%- endfor -%}

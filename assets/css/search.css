@@ -35,7 +35,7 @@
     vertical-align: middle;
     direction: ltr;
     font-size: 16px;
-    background: var(--oc-gray-3);
+    background: var(--oc-gray-1);
     transition: all .3s ease-in-out;
     padding-top: 3%;
 }
