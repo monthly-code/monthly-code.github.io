@@ -4,8 +4,12 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    max-width: 200px;
+    width: 16%;
+    max-width: 250px;
     transition: all 0.5s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .toc-area > .container {
@@ -76,6 +80,10 @@
         max-width: 100%;
         top: 0;
         transform: none;
+    }
+
+    .toc-area > .container {
+        margin-left: 0;
     }
 }
 
