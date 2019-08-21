@@ -41,7 +41,7 @@
 }
 
 .search-result-area.show.extend > .container > .result-area {
-    width: 90%;
+    max-width: 90%;
     transition: all .3s ease-in-out;
     padding-left: 10px;
 }

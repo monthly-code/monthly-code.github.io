@@ -82,6 +82,29 @@
     color: var(--oc-gray-7);
 }
 
+@media(max-width: 999px) {
+    .fab-area > .container > .search-bar.show {
+        width: 300px;
+        left: -240px;
+    }
+
+    .fab-area > .container > .search-bar::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    .fab-area > .container > .search-bar.show {
+        width: 200px;
+        left: -140px;
+    }
+
+    .fab-area > .container > .search-bar::placeholder {
+        font-size: 0;
+    }
+}
+
+
 .fab-area > .container > .fab-items {
     list-style-type: none;
     margin: 0;
