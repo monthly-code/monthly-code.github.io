@@ -3,8 +3,13 @@
 <div class="home-area">
     <h1>Newly</h1>
     {%- include common/data/labels.html -%}
-    {%- assign label_size = published_labels | size -%}
-    {%- if label_size > 0 -%}
+    {%- assign total_size = 0 -%}
+    {%- for label in published_labels -%}
+        {%- include common/data/publications.html label=label -%}
+        {%- assign publication_size = publications | size -%}
+        {%- assign total_size = total_size  | plus: publication_size -%}
+    {%- endfor -%}
+    {%- if total_size > 0 -%}
         <ul class="home-items">
         {%- for label in published_labels -%}
             {%- include common/data/publications.html label=label -%}
