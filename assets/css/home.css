@@ -29,3 +29,11 @@
 .home-area > .home-items > .home-item > .home-collection-label {
     color: var(--oc-gray-9);
 }
+
+.home-area > .home-empty {
+    display: block;
+    margin: 0 auto;
+    color: var(--oc-gray-7);
+    text-align: center;
+    font-size: 32px;
+}
