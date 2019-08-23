@@ -1,5 +1,6 @@
 ---
-permalink: debug
+layout: default
+permalink: /debug
 ---
 
 {%- if site.host == '127.0.0.1' or site.host == '0.0.0.0' -%}

@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 <div class="home-area">
     <h1>Newly</h1>
@@ -7,7 +8,7 @@
     {%- for label in published_labels -%}
         {%- include common/data/publications.html label=label -%}
         {%- assign publication_size = publications | size -%}
-        {%- assign total_size = total_size  | plus: publication_size -%}
+        {%- assign total_size = total_size | plus: publication_size -%}
     {%- endfor -%}
     {%- if total_size > 0 -%}
         <ul class="home-items">
